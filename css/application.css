@@ -1,0 +1,12 @@
+#chartContainer {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+.svgContainer {
+  margin: 0 5px;
+  width: 250px;
+  height: max-content; }
+
+/*# sourceMappingURL=application.css.map */
