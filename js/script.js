@@ -65,8 +65,7 @@ d3.csv("data/data_eng.csv", function(error, data){
         .attr("height", 0)
         .attr("class", "svgContainer");
 
-
-    var title = div.append("h2")
+    div.append("h2")
             .style("background", "red")
             .style("height", "50px")
             .html(function(d) {
