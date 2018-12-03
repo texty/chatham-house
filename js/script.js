@@ -89,6 +89,7 @@ d3.csv("data/data_eng.csv", function(error, data){
 
     var childDIV =  div.append("div")
         .attr("class", "childDIV")
+        .attr("value", "false")
         .style("width", chartWidth - m.left - m.right + "px")
         .attr("id", function(d, i) {
             return "c-" + i
@@ -150,6 +151,7 @@ d3.csv("data/data_eng.csv", function(error, data){
     //     .attr("opacity", 1)
     //     .call(xAxis);
 
+
     $(".title").on("click", function(d) {
 
         var t = d3.transition()
@@ -160,9 +162,28 @@ d3.csv("data/data_eng.csv", function(error, data){
             .find(".childDIV")
             .attr("id");
 
+        var check = $(this)
+            .parent()
+            .find(".childDIV")
+            .attr("value");
+
+        var test;
+        if(check === "true") {
+            test = "false";
+        } else {
+            test = "true";
+        }
+
          d3.select("#"+targetID)
+            .attr("value", test)
             .transition(t)
-            .style("height", "260px");
+            .style("height", function() {
+               if(check === "false") {
+                   return "260px";
+               } else {
+                   return "0px";
+               }
+            });
 
     });
 
