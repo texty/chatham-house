@@ -47,7 +47,7 @@ var xAxis = d3.svg.axis()
     .orient("bottom");
 
 
-d3.csv("data/data_eng.csv", function(error, data){
+d3.csv("data/data_ukr.csv", function(error, data){
 
     data.forEach(function(d) {
         return d.value = +d.value;
