@@ -1,12 +1,50 @@
+body {
+  font-family: 'PT Mono', monospace;
+  font-weight: 100;
+  color: white;
+  background-color: black; }
+
+h1 {
+  font-weight: 100;
+  width: 80vw;
+  max-width: 1200px;
+  margin: 5% auto 5% auto; }
+
+h2 {
+  font-size: 20px;
+  font-weight: 100; }
+
 #chartContainer {
   display: flex;
   justify-content: flex-start;
   flex-direction: row;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  width: 90vw;
+  max-width: 1200px;
+  margin: auto;
+  height: 90vh; }
 
 .svgContainer {
-  margin: 0 5px;
+  margin: 0 10px;
   width: 250px;
-  height: max-content; }
+  height: 300px; }
+
+.childDIV {
+  height: 0;
+  overflow: hidden; }
+
+.title {
+  background-color: grey;
+  cursor: pointer; }
+
+g.tick {
+  opacity: 1 !important; }
+
+g.tick line {
+  stroke: #acacac;
+  stroke-width: 0.3px; }
+
+g.tick text {
+  fill: white; }
 
 /*# sourceMappingURL=application.css.map */
