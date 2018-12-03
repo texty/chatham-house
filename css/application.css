@@ -8,11 +8,18 @@ h1 {
   font-weight: 100;
   width: 80vw;
   max-width: 1200px;
-  margin: 5% auto 5% auto; }
+  margin: 0 auto 5% auto; }
 
 h2 {
   font-size: 20px;
   font-weight: 100; }
+
+p {
+  font-size: 12px;
+  font-weight: 100;
+  width: 90vw;
+  max-width: 1200px;
+  margin: 5% auto 5% auto; }
 
 #chartContainer {
   display: flex;
@@ -23,6 +30,9 @@ h2 {
   max-width: 1200px;
   margin: auto;
   height: 90vh; }
+  @media (max-width: 1000px) {
+    #chartContainer {
+      justify-content: space-around; } }
 
 .svgContainer {
   margin: 0 10px;
