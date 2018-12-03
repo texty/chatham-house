@@ -15,36 +15,35 @@ var chartWidth  = 250,
     gapBetweenGroups = 20,
     spaceForLabels   = 150,
     spaceForLegend   = 150;
+//
+// var color = d3.scale.category20();
 
-var color = d3.scale.category20();
-
-// var color = d3.scale.ordinal()
-// //this assumes you have 3 groups of data//﻿each of the domains corresponds to a color set
-//     .domain(["SCO reponse", "State reponse", "Russian influence"])
-//     .range(["#b7ffa9", "#c2dbff", "red"]);
-
+var color = d3.scaleOrdinal()
+    .domain(["SCO reponse", "State reponse", "Russian influence"])
+    .range(["#d80bd3", "#ffed00", "#be1639"]);
 
 
 
-var x = d3.scale.linear()
+
+var x = d3.scaleLinear()
     .domain([0, 6])
     .range([0, chartWidth]);
 
-var y = d3.scale.linear()
+var y = d3.scaleLinear()
     .range([chartHeight + gapBetweenGroups, 0]);
 
-var yAxis = d3.svg.axis()
+var yAxis = d3.axisLeft(x)
     .scale(y)
     .tickFormat('')
-    .tickSize(0)
-    .orient("left");
+    .tickSize(0);
+// .orient("left");
 
-var xAxis = d3.svg.axis()
+var xAxis = d3.axisBottom(y)
     .scale(x)
     .ticks(5)
     .tickFormat('')
-    .tickSize(-180)
-    .orient("bottom");
+    .tickSize(-180);
+// .orient("bottom");
 
 
 d3.csv("data/data_ukr.csv", function(error, data){
@@ -88,11 +87,11 @@ d3.csv("data/data_ukr.csv", function(error, data){
             });
 
     var childDIV =  div.append("div")
-        .attr("class", "childDIV")
+        .attr("class", "childDIV_u")
         .attr("value", "false")
         .style("width", chartWidth - m.left - m.right + "px")
         .attr("id", function(d, i) {
-            return "c-" + i
+            return "ukr-" + i
         });
 
     var svg = childDIV.append("svg")
@@ -130,7 +129,7 @@ d3.csv("data/data_ukr.csv", function(error, data){
         .attr("transform", function(d, i) {
             return "translate(" + 0 + "," + (i * (barHeight + 2)) + ")";
         })
-        .attr("width", function (d){ console.log(d.value);  return x(d.value)})
+        .attr("width", function (d){ return x(d.value)})
         .attr("height", barHeight)
         .attr("fill", function(d){
             return color(d.measure)}
@@ -155,16 +154,16 @@ d3.csv("data/data_ukr.csv", function(error, data){
     $(".title").on("click", function(d) {
 
         var t = d3.transition()
-            .duration(3000);
+            .duration(750);
 
         var targetID = $(this)
             .parent()
-            .find(".childDIV")
+            .find(".childDIV_u")
             .attr("id");
 
         var check = $(this)
             .parent()
-            .find(".childDIV")
+            .find(".childDIV_u")
             .attr("value");
 
         var test;

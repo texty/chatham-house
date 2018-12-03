@@ -6,7 +6,7 @@ body {
   font-family: 'PT Mono', monospace;
   font-weight: 100;
   color: white;
-  background-color: black; }
+  background-color: #000000; }
 
 #header {
   width: 80vw;
@@ -47,7 +47,7 @@ p#footer {
   font-size: 12px;
   width: 90vw;
   max-width: 1200px;
-  margin: 0 auto 5% auto; }
+  margin: 20px auto 5% auto; }
 
 #chartContainer {
   display: flex;
@@ -68,6 +68,10 @@ p#footer {
   height: 250px; }
 
 .childDIV {
+  height: 210px;
+  overflow: hidden; }
+
+.childDIV_u {
   height: 0;
   overflow: hidden; }
 
