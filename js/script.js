@@ -104,12 +104,7 @@ d3.csv("data/data_eng.csv", function(error, data){
         .attr("height", 180)
        ;
 
-    //
-    // var swoopy = d3.swoopyDrag()
-    //     .x(function(d) { return x(d.sepalWidth)})
-    //     .y(function(d) { return y(d.sepalLength)})
-    //     .draggable(true)
-    //     .annotations(annotations);
+
 
 
 
@@ -129,7 +124,6 @@ d3.csv("data/data_eng.csv", function(error, data){
         return "translate(" + 0 + ","  + (i * 60) + ")";
     });
 
-    // var swoopySel = box.append('g').call(swoopy);
 
 
 
@@ -140,10 +134,12 @@ d3.csv("data/data_eng.csv", function(error, data){
         })
         .enter()
         .append("rect")
+        .attr("class", "bar")
         .attr("transform", function(d, i) {
             return "translate(" + 0 + "," + (i * (barHeight + 2)) + ")";
         })
         .attr("width", function (d){ return x(d.value)})
+        .attr("data-tippy-content", function (d){ return d.value + " from 5"})
         .attr("height", barHeight)
         .attr("fill", function(d){
             return color(d.measure)}
@@ -155,6 +151,8 @@ d3.csv("data/data_eng.csv", function(error, data){
         .html(function(d) {
             return d.key
         });
+
+    tippy('.bar');
 
 
     // box.append("g")
@@ -201,8 +199,47 @@ d3.csv("data/data_eng.csv", function(error, data){
     });
 
 
+    var L = d3.select("#en-0 svg");
 
 
+
+    var swoopy = d3.swoopyDrag()
+        .x(function(d) { return x(d.sepalWidth)})
+        .y(function(d) { return y(d.sepalLength)})
+        .draggable(false)
+        .annotations(annotations);
+
+    var swoopySel = L.append('g').attr("id", "swoo").call(swoopy);
+
+    // L.append('marker')
+    //     .attr('id', 'arrow')
+    //     .attr('viewBox', '-10 -10 20 20')
+    //     .attr('markerWidth', 20)
+    //     .attr('markerHeight', 20)
+    //     .attr('orient', 'auto')
+    //     .append('path')
+    //     .attr('d', 'M-6.75,-6.75 L 0,0 L -6.75,6.75')
+    //     .attr("fill", "white");
+
+
+    $("#swoo").find("g").attr("transform", "translate(50,30)");
+
+    swoopySel.selectAll("path")
+        .attr('marker-end', 'url(#arrow)')
+        .each(function() {
+            d3.select(this)
+                .style("fill", "none")
+                .style("stroke", "white");
+        })
+
+
+    swoopySel.selectAll("text")
+        .each(function() {
+            d3.select(this)
+                .style("font-size", "12px")
+                .style("fill", "white")
+                ;
+        })
 
 });
 
@@ -211,14 +248,36 @@ d3.csv("data/data_eng.csv", function(error, data){
 var annotations = [
     {
         "sepalWidth": 2.3,
-        "sepalLength": 5,
-        "path": "M1,86C-47,82,-55,18,-9,4",
-        "text": "Versicolor",        
+        "sepalLength": 2,
+        "path": "",
+        "text": "non-existent - 0",
         "textOffset": [
-            -2,
-            92
+            -50,
+            126
+        ]
+    }, {
+        "sepalWidth": 2.3,
+        "sepalLength": 2,
+        "path": "",
+        "text": "non-existent - 0",
+        "textOffset": [
+            -50,
+            117
+        ]
+    }
+    , {
+        "sepalWidth": 2.3,
+        "sepalLength": 2,
+        "path": "M131,34C141,15,138,-2,128,-16",
+        "text": "4 (max. 5)",
+        "textOffset": [
+            86,
+            46
         ]
     }
 ]
+
+
+
 
 

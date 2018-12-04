@@ -62,6 +62,13 @@ p#footer {
     #chartContainer {
       justify-content: space-around; } }
 
+.bar {
+  opacity: 0.8;
+  cursor: pointer; }
+
+.bar:hover {
+  opacity: 1; }
+
 .svgContainer {
   margin: 0 10px;
   width: 250px;
