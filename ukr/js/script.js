@@ -86,7 +86,7 @@ d3.csv("data/data_ukr.csv", function(error, data){
     div.append("div")
         .attr("class", "title")
         // .style("background", "red")
-        .style("height", "50px")
+        .style("height", "40px")
         .append("h2")
         .html(function(d) {
             return d.key
@@ -145,14 +145,14 @@ d3.csv("data/data_ukr.csv", function(error, data){
         .attr("data-tippy-content", function (d){ return d.value + " із 5"})
         // .attr("width", function (d){ return x(d.value)})
         .attr("width", 0)
-        .transition(t)
+        .transition()
         .delay(function(d,i){ return 200*i; })
         .duration(2000)
         .attr("width", function (d){ return x(d.value)})
 
         .attr("height", barHeight)
 
-        .attr("fill", "grey")
+        .attr("fill", "lightgrey")
     // .attr("fill", function(d){
     //     return color(d.measure)}
     // )
@@ -163,9 +163,9 @@ d3.csv("data/data_ukr.csv", function(error, data){
             return d.key
         })
         .attr("fill", "white")
-        .attr("y", -2)
+        .attr("y", -3)
         .style("margin-left", "-300")
-        .transition(t)
+        .transition()
         .delay(function(d,i){ return 200*i; })
         .duration(3000)
         .style("margin-left", "0");
@@ -278,6 +278,7 @@ d3.csv("data/data_ukr.csv", function(error, data){
 
 
 });
+
 
 
 

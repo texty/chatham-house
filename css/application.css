@@ -6,7 +6,7 @@ body {
   font-size: 16px;
   font-family: 'PT Mono', monospace;
   font-weight: 100;
-  color: white;
+  color: lightgrey;
   background-color: #000000;
   min-height: 100vh;
   display: flex; }
@@ -15,7 +15,7 @@ body {
   margin: auto; }
   #contentContainer #header {
     max-width: 1200px;
-    width: 80vw;
+    width: 90vw;
     margin: 10px auto 2% auto;
     display: grid;
     grid-template-columns: auto 60px; }
@@ -34,22 +34,27 @@ body {
     width: 50%;
     margin: auto; }
   #contentContainer .title {
+    background-color: lightgrey;
+    cursor: pointer;
     display: flex; }
   #contentContainer h2 {
-    margin: auto 0;
+    margin: auto 2px;
     font-size: 18px;
-    font-weight: 100; }
+    font-weight: 100;
+    color: black;
+    text-transform: uppercase; }
   #contentContainer p {
     font-size: 15px;
     font-weight: 100; }
   #contentContainer p.hint {
     max-width: 1200px;
     font-size: 15px;
-    width: 80vw;
+    width: 90vw;
     text-align: left;
-    margin: 0 auto 3% auto; }
+    margin: 0 auto 3% 0; }
   #contentContainer p#footer {
-    font-size: 15px;
+    font-size: 14px;
+    line-height: 1.4;
     width: 90vw;
     max-width: 1200px;
     margin: 20px auto 5% auto; }
@@ -61,14 +66,14 @@ body {
   flex-wrap: wrap;
   width: 90vw;
   max-width: 1200px;
-  margin: auto;
+  margin: 0;
   height: auto; }
   @media (max-width: 1000px) {
     #chartContainer {
-      justify-content: space-around; } }
+      justify-content: space-between; } }
 
 span {
-  color: white; }
+  color: lightgrey; }
 
 .bar {
   opacity: 0.8;
@@ -78,7 +83,7 @@ span {
   opacity: 1; }
 
 .svgContainer {
-  margin: 0 10px;
+  margin-right: 20px;
   width: 250px;
   height: 250px; }
 
@@ -89,10 +94,6 @@ span {
 .childDIV_u {
   height: 0;
   overflow: hidden; }
-
-.title {
-  background-color: grey;
-  cursor: pointer; }
 
 g.tick {
   opacity: 1 !important; }

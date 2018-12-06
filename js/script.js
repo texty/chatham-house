@@ -17,7 +17,7 @@ var chartWidth  = 250,
     spaceForLegend   = 150;
 
 var color = d3.scaleOrdinal(d3.schemeCategory20);
-var t = d3.transition().duration(750);
+var t = d3.transition();
 
 var x = d3.scaleLinear()
     .domain([0, 6])
@@ -86,7 +86,7 @@ d3.csv("data/data_eng.csv", function(error, data){
     div.append("div")
         .attr("class", "title")
             // .style("background", "red")
-            .style("height", "50px")
+            .style("height", "40px")
             .append("h2")
             .html(function(d) {
                 return d.key
@@ -152,7 +152,7 @@ d3.csv("data/data_eng.csv", function(error, data){
 
         .attr("height", barHeight)
 
-        .attr("fill", "grey")
+        .attr("fill", "lightgrey")
         // .attr("fill", function(d){
         //     return color(d.measure)}
         // )
@@ -163,12 +163,12 @@ d3.csv("data/data_eng.csv", function(error, data){
             return d.key
         })
         .attr("fill", "white")
-        .attr("y", -2)
+        .attr("y", -3)
         .style("margin-left", "-300")
         .transition()
         .delay(function(d,i){ return 200*i; })
         .duration(3000)
-        .style("margin-left", "0")
+        .style("margin-left", "0");
 
 
 
@@ -261,7 +261,8 @@ d3.csv("data/data_eng.csv", function(error, data){
 
          d3.select("#"+targetID)
             .attr("value", test)
-            .transition(t)
+             .transition(t)
+             .duration(1000)
             .style("height", function() {
                if(check === "false") {
                    return "210px";
