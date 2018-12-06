@@ -86,7 +86,7 @@ d3.csv("data/data_eng.csv", function(error, data){
     div.append("div")
         .attr("class", "title")
             // .style("background", "red")
-            .style("height", "40px")
+            .style("height", "30px")
             .append("h2")
             .html(function(d) {
                 return d.key

@@ -39,7 +39,7 @@ body {
     display: flex; }
   #contentContainer h2 {
     margin: auto 2px;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 100;
     color: black;
     text-transform: uppercase; }
@@ -56,8 +56,8 @@ body {
     font-size: 14px;
     line-height: 1.4;
     width: 90vw;
-    max-width: 1200px;
-    margin: 20px auto 5% auto; }
+    max-width: 1150px;
+    margin: 20px auto 5% 0; }
 
 #chartContainer {
   display: flex;
