@@ -37,23 +37,15 @@ body {
     background-color: lightgrey;
     cursor: pointer;
     display: flex; }
-  #contentContainer h2 {
-    margin: auto 2px;
-    font-size: 14px;
-    font-weight: 100;
-    color: black;
-    text-transform: uppercase; }
   #contentContainer p {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 100; }
   #contentContainer p.hint {
     max-width: 1200px;
-    font-size: 13px;
     width: 90vw;
     text-align: left;
     margin: 0 auto 3% 0; }
   #contentContainer p#footer {
-    font-size: 13px;
     line-height: 1.4;
     width: 90vw;
     max-width: 1150px;

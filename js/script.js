@@ -143,7 +143,6 @@ d3.csv("data/data_eng.csv", function(error, data){
             return "translate(" + 0 + "," + (i * (barHeight + 2)) + ")";
         })
         .attr("data-tippy-content", function (d){ return d.value + " from 5"})
-        // .attr("width", function (d){ return x(d.value)})
         .attr("width", 0)
         .transition()
         .delay(function(d,i){ return 200*i; })
@@ -152,18 +151,14 @@ d3.csv("data/data_eng.csv", function(error, data){
 
         .attr("height", barHeight)
 
-        .attr("fill", "lightgrey")
-        // .attr("fill", function(d){
-        //     return color(d.measure)}
-        // )
-    ;
+        .attr("fill", "lightgrey") ;
 
     box.append("text")
         .html(function(d) {
             return d.key
         })
         .attr("fill", "white")
-        .style("font-size", "13px")
+        .style("font-size", "14px")
         .attr("y", -3)
         ;
 
