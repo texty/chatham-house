@@ -33,6 +33,8 @@ body {
   #contentContainer #lang-button a {
     width: 50%;
     margin: auto; }
+  #contentContainer #lang-button a img {
+    width: 40px; }
   #contentContainer .title {
     background-color: lightgrey;
     cursor: pointer;
