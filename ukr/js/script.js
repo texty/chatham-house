@@ -57,7 +57,7 @@ d3.csv("data/data_ukr.csv", function(error, data){
 
     var chartHeight = barHeight * 3 + gapBetweenGroups * 3;
 
-    var groupHeight = barHeight * data.values.length;
+    // var groupHeight = barHeight * data.values.length;
 
 
 
