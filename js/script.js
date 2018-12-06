@@ -16,16 +16,8 @@ var chartWidth  = 250,
     spaceForLabels   = 150,
     spaceForLegend   = 150;
 
-// var color = d3.scale.category20();
 var color = d3.scaleOrdinal(d3.schemeCategory20);
-
-// var color = d3.scale.ordinal()
-// //this assumes you have 3 groups of data//﻿each of the domains corresponds to a color set
-//     .domain(["SCO reponse", "State reponse", "Russian influence"])
-//     .range(["#d80bd3", "#ffed00", "#be1639"]);
-
-
-
+var t = d3.transition().duration(750);
 
 var x = d3.scaleLinear()
     .domain([0, 6])
@@ -56,9 +48,17 @@ d3.csv("data/data_eng.csv", function(error, data){
         return d.value = +d.value;
     });
 
+    var myOrder = ["Russian influence", 'State reponse', 'SCO reponse'];
+
+
+    // data = data.sort(function(a, b) {
+    //     return myOrder.indexOf(a) - myOrder.indexOf(b);
+    // });
+
     var chartHeight = barHeight * 3 + gapBetweenGroups * 3;
 
     var groupHeight = barHeight * data.values.length;
+
 
 
     var dataset = d3.nest()
@@ -68,6 +68,7 @@ d3.csv("data/data_eng.csv", function(error, data){
         .key(function (d) {
             return d.country
         })
+
         .entries(data);
 
 
@@ -82,10 +83,11 @@ d3.csv("data/data_eng.csv", function(error, data){
 
         ;
 
-    div.append("h2")
+    div.append("div")
         .attr("class", "title")
             // .style("background", "red")
             .style("height", "50px")
+            .append("h2")
             .html(function(d) {
                 return d.key
             });
@@ -110,7 +112,7 @@ d3.csv("data/data_eng.csv", function(error, data){
 
     var barContainer = svg.append("g")
     .attr("transform", function(d, i) {
-        return "translate(" + 0 +"," + 15 + ")";
+        return "translate(" + 0 +"," + 20 + ")";
     });
 
 
@@ -134,40 +136,112 @@ d3.csv("data/data_eng.csv", function(error, data){
         })
         .enter()
         .append("rect")
-        .attr("class", "bar")
+        .attr("class",  function(d){
+            return "bar " + d.myClass
+        })
         .attr("transform", function(d, i) {
             return "translate(" + 0 + "," + (i * (barHeight + 2)) + ")";
         })
-        .attr("width", function (d){ return x(d.value)})
         .attr("data-tippy-content", function (d){ return d.value + " from 5"})
+        // .attr("width", function (d){ return x(d.value)})
+        .attr("width", 0)
+        .transition()
+        .delay(function(d,i){ return 200*i; })
+        .duration(2000)
+        .attr("width", function (d){ return x(d.value)})
+
         .attr("height", barHeight)
-        .attr("fill", function(d){
-            return color(d.measure)}
-        );
+
+        .attr("fill", "grey")
+        // .attr("fill", function(d){
+        //     return color(d.measure)}
+        // )
+    ;
 
     box.append("text")
-        .attr("fill", "white")
-        .attr("y", -2)
         .html(function(d) {
             return d.key
-        });
+        })
+        .attr("fill", "white")
+        .attr("y", -2)
+        .style("margin-left", "-300")
+        .transition()
+        .delay(function(d,i){ return 200*i; })
+        .duration(3000)
+        .style("margin-left", "0")
+
+
+
+    setTimeout(function(d){
+       d3.selectAll("rect.orange").attr("fill", "rgb(255, 127, 14)");
+       d3.selectAll("span.orange").style("color", "rgb(255, 127, 14)");
+    }, 3000);
+
+    setTimeout(function(d){
+        d3.selectAll("rect.blue").attr("fill", "rgb(31, 119, 180)");
+        d3.selectAll("span.blue").style("color", "rgb(31, 119, 180)");
+    }, 4000);
+
+    setTimeout(function(d){
+        d3.selectAll("rect.lightblue").attr("fill", "rgb(174, 199, 232)");
+        d3.selectAll("span.lightblue").style("color", "rgb(174, 199, 232)");
+    }, 5000);
+
+
+    setTimeout(function(d){
+
+
+        var L = d3.select("#en-0 svg");
+
+        var swoopy = d3.swoopyDrag()
+            .x(function(d) { return x(d.sepalWidth)})
+            .y(function(d) { return y(d.sepalLength)})
+            .draggable(false)
+            .annotations(annotations);
+
+        var swoopySel = L.append('g').attr("id", "swoo").call(swoopy);
+
+        L.append('marker')
+            .attr('id', 'arrow')
+            .attr('viewBox', '-10 -10 20 20')
+            .attr('markerWidth', 10)
+            .attr('markerHeight', 20)
+            .attr('orient', 'auto')
+            .append('path')
+            .attr('d', 'M-6.75,-6.75 L 0,0 L -6.75,6.75')
+            .attr("fill", "white");
+
+
+        $("#swoo").find("g").attr("transform", "translate(50,30)");
+
+        swoopySel.selectAll("path")
+            .attr('marker-end', 'url(#arrow)')
+            .each(function() {
+                d3.select(this)
+                    .style("fill", "none")
+                    .style("stroke", "white");
+            });
+
+
+        swoopySel.selectAll("text")
+            .each(function() {
+                d3.select(this)
+                    .style("font-size", "11px")
+                    .style("fill", "white")
+                    .attr("class", function(d) {
+                        return d.theClass
+                    })
+                ;
+            })
+
+
+
+    }, 6000);
 
     tippy('.bar');
 
 
-    // box.append("g")
-    //     .attr("class", "x axis")
-    //     // .attr("transform", "translate(0, 180)")
-    //     .attr("stroke", "white")
-    //     .attr("opacity", 1)
-    //     .call(xAxis);
-
-
-    $(".title").on("click", function(d) {
-
-        var t = d3.transition()
-            .duration(750);
-
+   $(".title").on("click", function(d) {
         var targetID = $(this)
             .parent()
             .find(".childDIV")
@@ -199,47 +273,8 @@ d3.csv("data/data_eng.csv", function(error, data){
     });
 
 
-    var L = d3.select("#en-0 svg");
 
 
-
-    var swoopy = d3.swoopyDrag()
-        .x(function(d) { return x(d.sepalWidth)})
-        .y(function(d) { return y(d.sepalLength)})
-        .draggable(false)
-        .annotations(annotations);
-
-    var swoopySel = L.append('g').attr("id", "swoo").call(swoopy);
-
-    // L.append('marker')
-    //     .attr('id', 'arrow')
-    //     .attr('viewBox', '-10 -10 20 20')
-    //     .attr('markerWidth', 20)
-    //     .attr('markerHeight', 20)
-    //     .attr('orient', 'auto')
-    //     .append('path')
-    //     .attr('d', 'M-6.75,-6.75 L 0,0 L -6.75,6.75')
-    //     .attr("fill", "white");
-
-
-    $("#swoo").find("g").attr("transform", "translate(50,30)");
-
-    swoopySel.selectAll("path")
-        .attr('marker-end', 'url(#arrow)')
-        .each(function() {
-            d3.select(this)
-                .style("fill", "none")
-                .style("stroke", "white");
-        })
-
-
-    swoopySel.selectAll("text")
-        .each(function() {
-            d3.select(this)
-                .style("font-size", "12px")
-                .style("fill", "white")
-                ;
-        })
 
 });
 
@@ -250,29 +285,22 @@ var annotations = [
         "sepalWidth": 2.3,
         "sepalLength": 2,
         "path": "",
-        "text": "non-existent - 0",
+        "text": "means 0",
+        "theClass":"",
         "textOffset": [
-            -50,
-            126
-        ]
-    }, {
-        "sepalWidth": 2.3,
-        "sepalLength": 2,
-        "path": "",
-        "text": "non-existent - 0",
-        "textOffset": [
-            -50,
-            117
+            -49,
+            133
         ]
     }
     , {
         "sepalWidth": 2.3,
         "sepalLength": 2,
-        "path": "M131,34C141,15,138,-2,128,-16",
-        "text": "4 (max. 5)",
+        "path": "M-27,68L6,68",
+        // "path": "M39,-6C61,-6,81,-5,93,-6",
+        "text": "hover bars for details",
+        "theClass":"rotate",
         "textOffset": [
-            86,
-            46
+            10,72
         ]
     }
 ]

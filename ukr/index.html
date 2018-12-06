@@ -34,9 +34,9 @@
         text-anchor: end;
     }
 
-    .bar:hover {
-        fill: brown;
-    }
+    /*.bar:hover {*/
+    /*fill: brown;*/
+    /*}*/
 
     .axis path,
     .axis line {
@@ -48,23 +48,30 @@
 
 </style>
 <body>
-<div id = header>
-    <h1>Важелі <span style="color:#be1639;">впливу Росії</span> в Україні, Білорусі та Молдові і опір<span style="color:#ffed00"> держави</span>/<span style="color:#d80bd3;">громадськості</span></h1>
-    <div id="lang-button"><a href="../index.html"><img style="width:100%" src="../img/en.jpeg"></a></div>
+<div id="contentContainer">
+    <div id=header>
+        <h1>Важелі <span class="orange">впливу Росії</span> в Україні, Білорусі та Молдові і опір <span class="blue">громадськості</span>
+            /<span class="lightblue"> держави</span></h1>
+        <div id="lang-button"><a href="../index.html"><img style="width:100%" src="../img/en.jpeg"></a></div>
+    </div>
+
+    <p class="hint">Клікніть на назву графіку, аби прибрати його.</p>
+
+    <div id="chartContainer"></div>
+
+    <p id="footer">Source: Based on interviews with experts in the target countries. The chart maps levels of various
+        vulnerabilities to Russian influence as perceived
+        by the experts, on a scale of 0 to 5, where 0 = ‘non-existent’, 1 = ‘minimal’, 2 = ‘moderate’, 3 =
+        ‘substantial’, 4 = ‘critical’ and 5 = ‘most prevalent’.
+        State and civil society responses are rated on a scale of 0 to 5, where 0 = ‘no response’, 1 = ‘minimal
+        response’, 2 = ‘mild response’, 3 = ‘moderate
+        effort’, 4 = ‘substantial effort’ and 5 = ‘high-level effective effort’.</p>
 </div>
-
-<p class="hint">Обиріть питання, щоб порівняти їх. Повторний клік прибирає графік.</p>
-
-<div id="chartContainer"></div>
-
-<p id="footer">Source: Based on interviews with experts in the target countries. The chart maps levels of various vulnerabilities to Russian influence as perceived
-    by the experts, on a scale of 0 to 5, where 0 = ‘non-existent’, 1 = ‘minimal’, 2 = ‘moderate’, 3 = ‘substantial’, 4 = ‘critical’ and 5 = ‘most prevalent’.
-    State and civil society responses are rated on a scale of 0 to 5, where 0 = ‘no response’, 1 = ‘minimal response’, 2 = ‘mild response’, 3 = ‘moderate
-    effort’, 4 = ‘substantial effort’ and 5 = ‘high-level effective effort’.</p>
-
 <script src="../lib/jquery-2.1.4.min.js"></script>
 <!--<script src="../lib/d3.js"></script>-->
-<script src ="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://unpkg.com/tippy.js@3/dist/tippy.all.min.js"></script>
+
 
 <!--<script src="../lib/d3.min.js"></script>-->
 <script src="../lib/swoopy-drag.js"></script>

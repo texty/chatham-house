@@ -3,51 +3,56 @@
   -webkit-margin-after: 0; }
 
 body {
+  font-size: 16px;
   font-family: 'PT Mono', monospace;
   font-weight: 100;
   color: white;
-  background-color: #000000; }
-
-#header {
-  width: 80vw;
-  margin: 10px auto 2% auto;
-  display: grid;
-  grid-template-columns: auto 60px; }
-
-h1 {
-  font-size: 25px;
-  font-weight: 100;
-  width: 90%;
-  grid-column: 1/2;
-  max-width: 1200px; }
-
-#lang-button {
-  float: right;
-  cursor: pointer;
+  background-color: #000000;
+  min-height: 100vh;
   display: flex; }
 
-#lang-button a {
-  width: 50%;
+#contentContainer {
   margin: auto; }
-
-h2 {
-  font-size: 20px;
-  font-weight: 100; }
-
-p {
-  font-weight: 100; }
-
-p.hint {
-  font-size: 16px;
-  width: 80vw;
-  text-align: left;
-  margin: 0 auto 3% auto; }
-
-p#footer {
-  font-size: 12px;
-  width: 90vw;
-  max-width: 1200px;
-  margin: 20px auto 5% auto; }
+  #contentContainer #header {
+    max-width: 1200px;
+    width: 80vw;
+    margin: 10px auto 2% auto;
+    display: grid;
+    grid-template-columns: auto 60px; }
+  #contentContainer h1 {
+    font-size: 25px;
+    line-height: 1.4;
+    font-weight: 100;
+    width: 90%;
+    grid-column: 1/2;
+    max-width: 1200px; }
+  #contentContainer #lang-button {
+    float: right;
+    cursor: pointer;
+    display: flex; }
+  #contentContainer #lang-button a {
+    width: 50%;
+    margin: auto; }
+  #contentContainer .title {
+    display: flex; }
+  #contentContainer h2 {
+    margin: auto 0;
+    font-size: 18px;
+    font-weight: 100; }
+  #contentContainer p {
+    font-size: 15px;
+    font-weight: 100; }
+  #contentContainer p.hint {
+    max-width: 1200px;
+    font-size: 15px;
+    width: 80vw;
+    text-align: left;
+    margin: 0 auto 3% auto; }
+  #contentContainer p#footer {
+    font-size: 15px;
+    width: 90vw;
+    max-width: 1200px;
+    margin: 20px auto 5% auto; }
 
 #chartContainer {
   display: flex;
@@ -61,6 +66,9 @@ p#footer {
   @media (max-width: 1000px) {
     #chartContainer {
       justify-content: space-around; } }
+
+span {
+  color: white; }
 
 .bar {
   opacity: 0.8;
