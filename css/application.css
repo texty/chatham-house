@@ -16,7 +16,7 @@ body {
   #contentContainer #header {
     max-width: 1200px;
     width: 90vw;
-    margin: 10px auto 2% auto;
+    margin: 40px auto 2% auto;
     display: grid;
     grid-template-columns: auto 60px; }
   #contentContainer h1 {
