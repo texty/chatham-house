@@ -165,10 +165,7 @@ d3.csv("data/data_ukr.csv", function(error, data){
         .attr("fill", "white")
         .attr("y", -3)
         .style("margin-left", "-300")
-        .transition()
-        .delay(function(d,i){ return 200*i; })
-        .duration(3000)
-        .style("margin-left", "0");
+        .style("font-size", "13px");
 
 
 

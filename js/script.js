@@ -163,12 +163,9 @@ d3.csv("data/data_eng.csv", function(error, data){
             return d.key
         })
         .attr("fill", "white")
+        .style("font-size", "13px")
         .attr("y", -3)
-        .style("margin-left", "-300")
-        .transition()
-        .delay(function(d,i){ return 200*i; })
-        .duration(3000)
-        .style("margin-left", "0");
+        ;
 
 
 
