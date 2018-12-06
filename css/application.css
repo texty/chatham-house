@@ -18,7 +18,11 @@ body {
     width: 90vw;
     margin: 40px auto 4% auto;
     display: grid;
-    grid-template-columns: auto 60px; }
+    grid-template-columns: auto 60px;
+    grid-auto-rows: auto; }
+  #contentContainer #project-title {
+    grid-column: 1/2;
+    grid-row: 1/2; }
   #contentContainer h1 {
     font-size: 25px;
     line-height: 1.4;
@@ -27,14 +31,14 @@ body {
     grid-column: 1/2;
     max-width: 1200px; }
   #contentContainer #lang-button {
+    grid-column: 2/3;
+    grid-row: 1/2;
     float: right;
     cursor: pointer;
     display: flex; }
   #contentContainer #lang-button a {
     width: 50%;
     margin: auto; }
-  #contentContainer #lang-button a img {
-    width: 40px; }
   #contentContainer .title {
     background-color: lightgrey;
     cursor: pointer;
@@ -66,7 +70,7 @@ body {
   max-width: 1200px;
   margin: 0;
   height: auto; }
-  @media (max-width: 1000px) {
+  @media (max-width: 1200px) {
     #chartContainer {
       justify-content: space-between; } }
 
