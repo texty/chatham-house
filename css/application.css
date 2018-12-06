@@ -18,7 +18,7 @@ body {
     width: 90vw;
     margin: 40px auto 4% auto;
     display: grid;
-    grid-template-columns: auto 60px;
+    grid-template-columns: 90% 10%;
     grid-auto-rows: auto; }
   #contentContainer #project-title {
     grid-column: 1/2;
