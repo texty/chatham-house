@@ -196,7 +196,7 @@ d3.csv("data/data_ukr.csv", function(error, data){
         var swoopy = d3.swoopyDrag()
             .x(function(d) { return x(d.sepalWidth)})
             .y(function(d) { return y(d.sepalLength)})
-            .draggable(true)
+            .draggable(false)
             .annotations(annotations);
 
         var swoopySel = L.append('g').attr("id", "swoo").call(swoopy);
