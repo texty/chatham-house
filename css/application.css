@@ -34,9 +34,9 @@ body {
   #contentContainer #header {
     max-width: 1200px;
     width: 90vw;
-    margin: 40px auto 4% auto;
+    margin: 40px auto 4% 15px;
     display: grid;
-    grid-template-columns: 90% 10%;
+    grid-template-columns: auto 60px;
     grid-auto-rows: auto; }
   #contentContainer #project-title {
     grid-column: 1/2;
@@ -78,7 +78,7 @@ body {
     line-height: 1.4;
     width: 90vw;
     max-width: 1150px;
-    margin: 5px auto 5% 0; }
+    margin: 5px auto 5% 15px; }
 
 #chartContainer {
   display: flex;
@@ -87,7 +87,7 @@ body {
   flex-wrap: wrap;
   width: 90vw;
   max-width: 1200px;
-  margin: 0;
+  margin: 0 0 0 15px;
   height: auto; }
   @media (max-width: 1200px) {
     #chartContainer {
