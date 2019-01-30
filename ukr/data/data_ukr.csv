@@ -1,82 +1,82 @@
 driver,country,measure,value,myClass
-Економічна залежність,Україна,Russian influence,3,orange
-Національні меншини,Україна,Russian influence,4,orange
-Звʼязки еліт,Україна,Russian influence,3,orange
-Медіа середовище,Україна,Russian influence,4,orange
-Конфлікти і безпека ,Україна,Russian influence,5,orange
-Корупція,Україна,Russian influence,3,orange
-Політична сфера,Україна,Russian influence,4,orange
-Православна церква,Україна,Russian influence,3,orange
-Національна ідентичність,Україна,Russian influence,2,orange
-Економічна залежність,Білорусь,Russian influence,4,orange
-Національні меншини,Білорусь,Russian influence,1,orange
-Звʼязки еліт,Білорусь,Russian influence,3,orange
-Медіа середовище,Білорусь,Russian influence,5,orange
-Конфлікти і безпека ,Білорусь,Russian influence,4,orange
-Корупція,Білорусь,Russian influence,1,orange
-Політична сфера,Білорусь,Russian influence,3,orange
-Православна церква,Білорусь,Russian influence,4,orange
-Національна ідентичність,Білорусь,Russian influence,5,orange
-Економічна залежність,Молдова,Russian influence,3,orange
-Національні меншини,Молдова,Russian influence,4,orange
-Звʼязки еліт,Молдова,Russian influence,3,orange
-Медіа середовище,Молдова,Russian influence,5,orange
-Конфлікти і безпека ,Молдова,Russian influence,3,orange
-Корупція,Молдова,Russian influence,3,orange
-Політична сфера,Молдова,Russian influence,4,orange
-Православна церква,Молдова,Russian influence,5,orange
-Національна ідентичність,Молдова,Russian influence,4,orange
-Економічна залежність,Україна,SCO reponse,4,blue
-Національні меншини,Україна,SCO reponse,3,blue
-Звʼязки еліт,Україна,SCO reponse,0,blue
-Медіа середовище,Україна,SCO reponse,4,blue
-Конфлікти і безпека ,Україна,SCO reponse,4,blue
-Корупція,Україна,SCO reponse,4,blue
-Політична сфера,Україна,SCO reponse,2,blue
-Православна церква,Україна,SCO reponse,0,blue
-Національна ідентичність,Україна,SCO reponse,2,blue
-Економічна залежність,Білорусь,SCO reponse,1,blue
-Національні меншини,Білорусь,SCO reponse,0,blue
-Звʼязки еліт,Білорусь,SCO reponse,3,blue
-Медіа середовище,Білорусь,SCO reponse,2,blue
-Конфлікти і безпека ,Білорусь,SCO reponse,2,blue
-Корупція,Білорусь,SCO reponse,0,blue
-Політична сфера,Білорусь,SCO reponse,2,blue
-Православна церква,Білорусь,SCO reponse,0,blue
-Національна ідентичність,Білорусь,SCO reponse,4,blue
-Економічна залежність,Молдова,SCO reponse,0,blue
-Національні меншини,Молдова,SCO reponse,1,blue
-Звʼязки еліт,Молдова,SCO reponse,0,blue
-Медіа середовище,Молдова,SCO reponse,5,blue
-Конфлікти і безпека ,Молдова,SCO reponse,0,blue
-Корупція,Молдова,SCO reponse,0,blue
-Політична сфера,Молдова,SCO reponse,2,blue
-Православна церква,Молдова,SCO reponse,0,blue
-Національна ідентичність,Молдова,SCO reponse,1,blue
-Економічна залежність,Україна,State reponse,2,lightblue
-Національні меншини,Україна,State reponse,3,lightblue
-Звʼязки еліт,Україна,State reponse,4,lightblue
-Медіа середовище,Україна,State reponse,4,lightblue
-Конфлікти і безпека ,Україна,State reponse,4,lightblue
-Корупція,Україна,State reponse,3,lightblue
-Політична сфера,Україна,State reponse,2,lightblue
-Православна церква,Україна,State reponse,4,lightblue
-Національна ідентичність,Україна,State reponse,4,lightblue
-Економічна залежність,Білорусь,State reponse,1,lightblue
-Національні меншини,Білорусь,State reponse,2,lightblue
-Звʼязки еліт,Білорусь,State reponse,3,lightblue
-Медіа середовище,Білорусь,State reponse,2,lightblue
-Конфлікти і безпека ,Білорусь,State reponse,3,lightblue
-Корупція,Білорусь,State reponse,4,lightblue
-Політична сфера,Білорусь,State reponse,2,lightblue
-Православна церква,Білорусь,State reponse,3,lightblue
-Національна ідентичність,Білорусь,State reponse,2,lightblue
-Економічна залежність,Молдова,State reponse,0,lightblue
-Національні меншини,Молдова,State reponse,0,lightblue
-Звʼязки еліт,Молдова,State reponse,0,lightblue
-Медіа середовище,Молдова,State reponse,2,lightblue
-Конфлікти і безпека ,Молдова,State reponse,1,lightblue
-Корупція,Молдова,State reponse,0,lightblue
-Політична сфера,Молдова,State reponse,1,lightblue
-Православна церква,Молдова,State reponse,0,lightblue
-Національна ідентичність,Молдова,State reponse,0,lightblue
+Економічна залежність,Україна,Russian influence,3,influence
+Національні меншини,Україна,Russian influence,4,influence
+Звʼязки еліт,Україна,Russian influence,3,influence
+Медіа середовище,Україна,Russian influence,4,influence
+Конфлікти і безпека ,Україна,Russian influence,5,influence
+Корупція,Україна,Russian influence,3,influence
+Політична сфера,Україна,Russian influence,4,influence
+Православна церква,Україна,Russian influence,3,influence
+Національна ідентичність,Україна,Russian influence,2,influence
+Економічна залежність,Білорусь,Russian influence,4,influence
+Національні меншини,Білорусь,Russian influence,1,influence
+Звʼязки еліт,Білорусь,Russian influence,3,influence
+Медіа середовище,Білорусь,Russian influence,5,influence
+Конфлікти і безпека ,Білорусь,Russian influence,4,influence
+Корупція,Білорусь,Russian influence,1,influence
+Політична сфера,Білорусь,Russian influence,3,influence
+Православна церква,Білорусь,Russian influence,4,influence
+Національна ідентичність,Білорусь,Russian influence,5,influence
+Економічна залежність,Молдова,Russian influence,3,influence
+Національні меншини,Молдова,Russian influence,4,influence
+Звʼязки еліт,Молдова,Russian influence,3,influence
+Медіа середовище,Молдова,Russian influence,5,influence
+Конфлікти і безпека ,Молдова,Russian influence,3,influence
+Корупція,Молдова,Russian influence,3,influence
+Політична сфера,Молдова,Russian influence,4,influence
+Православна церква,Молдова,Russian influence,5,influence
+Національна ідентичність,Молдова,Russian influence,4,influence
+Економічна залежність,Україна,State reponse,2,state
+Національні меншини,Україна,State reponse,3,state
+Звʼязки еліт,Україна,State reponse,4,state
+Медіа середовище,Україна,State reponse,4,state
+Конфлікти і безпека ,Україна,State reponse,4,state
+Корупція,Україна,State reponse,3,state
+Політична сфера,Україна,State reponse,2,state
+Православна церква,Україна,State reponse,4,state
+Національна ідентичність,Україна,State reponse,4,state
+Економічна залежність,Білорусь,State reponse,1,state
+Національні меншини,Білорусь,State reponse,2,state
+Звʼязки еліт,Білорусь,State reponse,3,state
+Медіа середовище,Білорусь,State reponse,2,state
+Конфлікти і безпека ,Білорусь,State reponse,3,state
+Корупція,Білорусь,State reponse,4,state
+Політична сфера,Білорусь,State reponse,2,state
+Православна церква,Білорусь,State reponse,3,state
+Національна ідентичність,Білорусь,State reponse,2,state
+Економічна залежність,Молдова,State reponse,0,state
+Національні меншини,Молдова,State reponse,0,state
+Звʼязки еліт,Молдова,State reponse,0,state
+Медіа середовище,Молдова,State reponse,2,state
+Конфлікти і безпека ,Молдова,State reponse,1,state
+Корупція,Молдова,State reponse,0,state
+Політична сфера,Молдова,State reponse,1,state
+Православна церква,Молдова,State reponse,0,state
+Національна ідентичність,Молдова,State reponse,0,state
+Економічна залежність,Україна,SCO reponse,4,civil
+Національні меншини,Україна,SCO reponse,3,civil
+Звʼязки еліт,Україна,SCO reponse,0,civil
+Медіа середовище,Україна,SCO reponse,4,civil
+Конфлікти і безпека ,Україна,SCO reponse,4,civil
+Корупція,Україна,SCO reponse,4,civil
+Політична сфера,Україна,SCO reponse,2,civil
+Православна церква,Україна,SCO reponse,0,civil
+Національна ідентичність,Україна,SCO reponse,2,civil
+Економічна залежність,Білорусь,SCO reponse,1,civil
+Національні меншини,Білорусь,SCO reponse,0,civil
+Звʼязки еліт,Білорусь,SCO reponse,3,civil
+Медіа середовище,Білорусь,SCO reponse,2,civil
+Конфлікти і безпека ,Білорусь,SCO reponse,2,civil
+Корупція,Білорусь,SCO reponse,0,civil
+Політична сфера,Білорусь,SCO reponse,2,civil
+Православна церква,Білорусь,SCO reponse,0,civil
+Національна ідентичність,Білорусь,SCO reponse,4,civil
+Економічна залежність,Молдова,SCO reponse,0,civil
+Національні меншини,Молдова,SCO reponse,1,civil
+Звʼязки еліт,Молдова,SCO reponse,0,civil
+Медіа середовище,Молдова,SCO reponse,5,civil
+Конфлікти і безпека ,Молдова,SCO reponse,0,civil
+Корупція,Молдова,SCO reponse,0,civil
+Політична сфера,Молдова,SCO reponse,2,civil
+Православна церква,Молдова,SCO reponse,0,civil
+Національна ідентичність,Молдова,SCO reponse,1,civil

@@ -17,7 +17,7 @@
         margin:auto 2px;
         font-size:15px;
         font-weight: 100;
-        color:black;
+        color:#597B7C;
         text-transform: uppercase;
     }
 
@@ -26,11 +26,36 @@
 <body>
 <div id="contentContainer">
 <div id = header>
-    <h1>Drivers of <span class="orange">Russian influence</span> in Ukraine, Belarus and Moldova and <span class="blue" style="">civil society</span> / <span class="lightblue">state</span> responses</h1>
-    <div id="lang-button"><a href="ukr/index.html"><img style="width:40px" src="img/ukr.png"></a></div>
+    <h1>Drivers of Russian influence in Ukraine, Belarus and Moldova <br> and civil society / state responses</h1>
+    <div id="lang-button">
+        <a style="text-decoration:none; color:#597B7C; font-weight: 800;  width:40px; display: flex; height:40px; border:2px solid #597B7C; border-radius:50%; text-align:center;" href="ukr/index.html">
+            <p style="margin:auto;font-size: 18px;">UKR</p>
+        </a>
+    </div>
 </div>
 
-<p class="hint">Click on the chart's title to hide the chart.</p>
+    <div style="margin-bottom:30px;">
+        <input  type="checkbox" id="influence" name="influence">
+        <label style="color:#b32017; margin-right:30px;" for="influence">show influence</label>
+        <input type="checkbox" id="state" name="state">
+        <label style="color:#005984; margin-right:30px;" for="state">show responses from state</label>
+        <input type="checkbox" id="civil" name="civil">
+        <label style="color:#00AEEF; "for="civil">show responses from civil society</label>
+
+    </div>
+
+    <!--<div>-->
+        <!--<input type="checkbox" id="state" name="state">-->
+        <!--<label for="state">show responses from state</label>-->
+    <!--</div>-->
+
+    <!--<div>-->
+        <!--<input type="checkbox" id="civil" name="civil">-->
+        <!--<label for="civil"> show responses from civil society</label>-->
+    <!--</div>-->
+
+
+    <!--<p class="hint">Click on the chart's title to hide the chart.</p>-->
 
 <div id="chartContainer" ></div>
 

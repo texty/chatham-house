@@ -16,7 +16,7 @@
         margin:auto 2px;
         font-size:14px;
         font-weight: 100;
-        color:black;
+        color:#597B7C;
         text-transform: uppercase;
     }
 
@@ -24,12 +24,23 @@
 <body>
 <div id="contentContainer">
     <div id=header>
-        <h1>Важелі <span class="orange">впливу Росії</span> в Україні, Білорусі та Молдові і опір <span class="blue">громадськості</span>
-            /<span class="lightblue"> держави</span></h1>
-        <div id="lang-button"><a href="../index.html"><img style="width:40px" src="../img/en.jpeg"></a></div>
+        <h1>Важелі впливу Росії в Україні, Білорусі та Молдові <br> і опір громадськості / держави</h1>
+        <!--<div id="lang-button"><a href="../index.html"><img style="width:40px" src="../img/eng.png"></a></div>-->
+        <div id="lang-button">
+            <a style="text-decoration:none; color:#597B7C; font-weight: 800;  width:40px; display: flex; height:40px; border:2px solid #597B7C; border-radius:50%; text-align:center;" href="../index.html">
+                <p style="margin:auto;font-size: 18px;">EN</p>
+            </a>
+        </div>
     </div>
 
-    <p class="hint">Клікніть на назву графіку, аби прибрати його.</p>
+    <div style="margin-bottom:30px;">
+        <input  type="checkbox" id="influence" name="influence">
+        <label style="color:#b32017; margin-right:30px;" for="influence">показати рівень впливу</label>
+        <input type="checkbox" id="state" name="state">
+        <label style="color:#005984; margin-right:30px;" for="state">показати відсіч держави</label>
+        <input type="checkbox" id="civil" name="civil">
+        <label style="color:#00AEEF;" for="civil">показати відсіч громадянського суспільства</label>
+    </div>
 
     <div id="chartContainer"></div>
 

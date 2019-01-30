@@ -1,13 +1,31 @@
+@font-face {
+  font-family: Charter;
+  src: url(../fonts/charteritc.otf); }
+@font-face {
+  font-family: Charter Bold;
+  src: url(../fonts/charterblackc.otf); }
+@font-face {
+  font-family: Charter Italic;
+  src: url(../fonts/chartercbolditalic.otf); }
+@keyframes color-change {
+  0% {
+    fill: #b32017; }
+  50% {
+    fill: #8a2529; }
+  100% {
+    fill: #b32017; } }
+.anim {
+  animation: color-change 0.5s 5; }
+
 * {
   -webkit-margin-before: 0;
   -webkit-margin-after: 0; }
 
 body {
   font-size: 16px;
-  font-family: 'PT Mono', monospace;
+  font-family: 'Charter', serif;
   font-weight: 100;
-  color: lightgrey;
-  background-color: #000000;
+  color: #597B7C;
   min-height: 100vh;
   display: flex; }
 
@@ -40,7 +58,8 @@ body {
     width: 50%;
     margin: auto; }
   #contentContainer .title {
-    background-color: lightgrey;
+    background-color: rgba(89, 123, 124, 0.15);
+    fill: #597B7C;
     cursor: pointer;
     display: flex; }
   #contentContainer p {

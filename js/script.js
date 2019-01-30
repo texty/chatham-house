@@ -21,7 +21,7 @@ var t = d3.transition();
 
 var x = d3.scaleLinear()
     .domain([0, 6])
-    .range([0, chartWidth]);
+    .range([0, 250]);
 
 var y = d3.scaleLinear()
     .range([chartHeight + gapBetweenGroups, 0]);
@@ -48,7 +48,7 @@ d3.csv("data/data_eng.csv", function(error, data){
         return d.value = +d.value;
     });
 
-    var myOrder = ["Russian influence", 'State reponse', 'SCO reponse'];
+    var myOrder = ["Russian influence", 'State response', 'SCO response'];
 
 
     // data = data.sort(function(a, b) {
@@ -103,14 +103,15 @@ d3.csv("data/data_eng.csv", function(error, data){
     var svg = childDIV.append("svg")
         .attr("width", chartWidth - m.left - m.right  + "px")
         .attr("class", "shit")
-        .attr("height", 180)
-       ;
+        .attr("height", "100%");
 
 
 
 
 
     var barContainer = svg.append("g")
+        // .attr("width", chartWidth - m.left - m.right  + "px")
+        // .attr("height", "100%")
     .attr("transform", function(d, i) {
         return "translate(" + 0 +"," + 20 + ")";
     });
@@ -122,8 +123,9 @@ d3.csv("data/data_eng.csv", function(error, data){
         })
         .enter()
         .append("g")
+        .attr("class", function(d,i){ return "box"+i })
         .attr("transform", function(d, i) {
-        return "translate(" + 0 + ","  + (i * 60) + ")";
+            return "translate(" + 0 + ","  + (i * 70) + ")";
     });
 
 
@@ -140,44 +142,50 @@ d3.csv("data/data_eng.csv", function(error, data){
             return "bar " + d.myClass
         })
         .attr("transform", function(d, i) {
-            return "translate(" + 0 + "," + (i * (barHeight + 2)) + ")";
+            if(i === 1){
+                return "translate(" + 0 + "," + (i * 13) + ")";
+            } else {
+                return "translate(" + 0 + "," + (i * 13) + ")";
+            }
+
         })
         .attr("data-tippy-content", function (d){ return d.value + " from 5"})
         .attr("width", 0)
-        .transition()
-        .delay(function(d,i){ return 200*i; })
-        .duration(2000)
-        .attr("width", function (d){ return x(d.value)})
+        .attr("height", barHeight);
 
-        .attr("height", barHeight)
 
-        .attr("fill", "lightgrey") ;
+    
+
 
     box.append("text")
         .html(function(d) {
             return d.key
         })
-        .attr("fill", "white")
+        .attr("fill", "#597B7C")
         .style("font-size", "14px")
         .attr("y", -3)
         ;
 
+    //
+    // box.append("line")
+    //     .attr("x1", x(0))
+    //     .attr("x2", x(5))
+    //     .attr("y1", 14)
+    //     .attr("y2", 14)
+    //     .attr("stroke", "lightgrey")
+    //     .attr("stroke-dasharray", "4 2");
+
+
+
 
 
     setTimeout(function(d){
-       d3.selectAll("rect.orange").attr("fill", "rgb(255, 127, 14)");
-       d3.selectAll("span.orange").style("color", "rgb(255, 127, 14)");
-    }, 3000);
+        d3.selectAll("rect.influence").attr("fill", "#b32017");
+        d3.selectAll("rect.state").attr("fill", "#005984");
+        d3.selectAll("rect.civil").attr("fill", "#00AEEF");
+    }, 1000);
 
-    setTimeout(function(d){
-        d3.selectAll("rect.blue").attr("fill", "rgb(31, 119, 180)");
-        d3.selectAll("span.blue").style("color", "rgb(31, 119, 180)");
-    }, 4000);
 
-    setTimeout(function(d){
-        d3.selectAll("rect.lightblue").attr("fill", "rgb(174, 199, 232)");
-        d3.selectAll("span.lightblue").style("color", "rgb(174, 199, 232)");
-    }, 5000);
 
 
     setTimeout(function(d){
@@ -219,7 +227,7 @@ d3.csv("data/data_eng.csv", function(error, data){
             .each(function() {
                 d3.select(this)
                     .style("font-size", "11px")
-                    .style("fill", "white")
+                    .style("fill", "grey")
                     .attr("class", function(d) {
                         return d.theClass
                     })
@@ -264,41 +272,127 @@ d3.csv("data/data_eng.csv", function(error, data){
             });
 
     });
-
-
-
-
-
 });
 
 
-
-var annotations = [
-    {
-        "sepalWidth": 2.3,
-        "sepalLength": 2,
-        "path": "",
-        "text": "means 0",
-        "theClass":"",
-        "textOffset": [
-            -49,
-            133
-        ]
+$("#influence").change(function() {
+    if(this.checked) {
+        d3.selectAll("rect.influence")
+            .classed("anim", true)
+            .transition()
+            .duration(750)
+            .attr("width", function (d){ return x(d.value)})
+            .attr("fill", "#b32017")
+            ;
+    } else {
+        d3.selectAll("rect.influence")
+            .classed("anim", false)
+            .transition()
+            .duration(750)
+            .attr("width",0)
+            ;
     }
-    , {
-        "sepalWidth": 2.3,
-        "sepalLength": 2,
-        "path": "M-27,68L6,68",
-        // "path": "M39,-6C61,-6,81,-5,93,-6",
-        "text": "hover bars for details",
-        "theClass":"rotate",
-        "textOffset": [
-            10,72
-        ]
+});
+
+
+$("#civil").change(function() {
+    if(this.checked) {
+        d3.selectAll("rect.civil")
+            .transition()
+            .duration(750)
+            .attr("width", function (d){ return x(d.value)})
+    } else {
+        d3.selectAll("rect.civil")
+            .transition()
+            .duration(750)
+            .attr("width",0)
     }
-]
+});
+
+$("#state").change(function() {
+    if(this.checked) {
+        d3.selectAll("rect.state")
+            .transition()
+            .duration(750)
+            .attr("width", function (d){ return x(d.value)})
+    } else {
+        d3.selectAll("rect.state")
+            .transition()
+            .duration(750)
+            .attr("width",0)
+    }
+});
 
 
+// var annotations = [
+//     {
+//         "sepalWidth": 2.3,
+//         "sepalLength": 2,
+//         "path": "",
+//         "text": "means 0",
+//         "theClass":"",
+//         "textOffset": [
+//             -49,
+//             133
+//         ]
+//     }
+//     , {
+//         "sepalWidth": 2.3,
+//         "sepalLength": 2,
+//         "path": "M-27,68L6,68",
+//         // "path": "M39,-6C61,-6,81,-5,93,-6",
+//         "text": "hover bars for details",
+//         "theClass":"rotate",
+//         "textOffset": [
+//             10,72
+//         ]
+//     }
+// ]
+
+
+
+dragElement(document.getElementsByClassName("svgContainer"));
+
+function dragElement(elmnt) {
+    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    if (document.getElementById(elmnt.id + "header")) {
+        // if present, the header is where you move the DIV from:
+        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+    } else {
+        // otherwise, move the DIV from anywhere inside the DIV:
+        elmnt.onmousedown = dragMouseDown;
+    }
+
+    function dragMouseDown(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // get the mouse cursor position at startup:
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        // call a function whenever the cursor moves:
+        document.onmousemove = elementDrag;
+    }
+
+    function elementDrag(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // calculate the new cursor position:
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        // set the element's new position:
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+    }
+
+    function closeDragElement() {
+        // stop moving when mouse button is released:
+        document.onmouseup = null;
+        document.onmousemove = null;
+    }
+}
 
 
 

@@ -21,7 +21,7 @@ var t = d3.transition();
 
 var x = d3.scaleLinear()
     .domain([0, 6])
-    .range([0, chartWidth]);
+    .range([0, 250]);
 
 var y = d3.scaleLinear()
     .range([chartHeight + gapBetweenGroups, 0]);
@@ -144,21 +144,14 @@ d3.csv("data/data_ukr.csv", function(error, data){
         })
         .attr("data-tippy-content", function (d){ return d.value + " із 5"})
         .attr("width", 0)
-        .transition()
-        .delay(function(d,i){ return 200*i; })
-        .duration(2000)
-        .attr("width", function (d){ return x(d.value)})
-
         .attr("height", barHeight)
-
-        .attr("fill", "lightgrey")    
     ;
 
     box.append("text")
         .html(function(d) {
             return d.key
         })
-        .attr("fill", "white")
+        .attr("fill", "#597B7C")
         .attr("y", -3)
         .style("margin-left", "-300")
         .style("font-size", "14px");
@@ -166,19 +159,10 @@ d3.csv("data/data_ukr.csv", function(error, data){
 
 
     setTimeout(function(d){
-        d3.selectAll("rect.orange").attr("fill", "rgb(255, 127, 14)");
-        d3.selectAll("span.orange").style("color", "rgb(255, 127, 14)");
-    }, 3000);
-
-    setTimeout(function(d){
-        d3.selectAll("rect.blue").attr("fill", "rgb(31, 119, 180)");
-        d3.selectAll("span.blue").style("color", "rgb(31, 119, 180)");
-    }, 4000);
-
-    setTimeout(function(d){
-        d3.selectAll("rect.lightblue").attr("fill", "rgb(174, 199, 232)");
-        d3.selectAll("span.lightblue").style("color", "rgb(174, 199, 232)");
-    }, 5000);
+        d3.selectAll("rect.influence").attr("fill", "#b32017");
+        d3.selectAll("rect.state").attr("fill", "#005984");
+        d3.selectAll("rect.civil").attr("fill", "#00AEEF");
+    }, 1000);
 
 
     setTimeout(function(d){
@@ -266,7 +250,53 @@ d3.csv("data/data_ukr.csv", function(error, data){
 
     });
 
+    $("#influence").change(function() {
+        if(this.checked) {
+            d3.selectAll("rect.influence")
+                .classed("anim", true)
+                .transition()
+                .duration(750)
+                .attr("width", function (d){ return x(d.value)})
+                .attr("fill", "#b32017")
+            ;
+        } else {
+            d3.selectAll("rect.influence")
+                .classed("anim", false)
+                .transition()
+                .duration(750)
+                .attr("width",0)
+            ;
+        }
+    });
 
+
+    $("#civil").change(function() {
+        if(this.checked) {
+            d3.selectAll("rect.civil")
+                .transition()
+                .duration(750)
+                .attr("width", function (d){ return x(d.value)})
+        } else {
+            d3.selectAll("rect.civil")
+                .transition()
+                .duration(750)
+                .attr("width",0)
+        }
+    });
+
+    $("#state").change(function() {
+        if(this.checked) {
+            d3.selectAll("rect.state")
+                .transition()
+                .duration(750)
+                .attr("width", function (d){ return x(d.value)})
+        } else {
+            d3.selectAll("rect.state")
+                .transition()
+                .duration(750)
+                .attr("width",0)
+        }
+    });
 
 
 
