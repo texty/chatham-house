@@ -285,7 +285,7 @@ $("#influence").change(function() {
             .attr("width", function (d){ return x(d.value)})
             .attr("fill", "#b32017");
 
-        d3.select("#swoo-en").style("display", "block")
+
     } else {
         d3.selectAll("rect.influence")
             .classed("anim", false)
@@ -293,7 +293,7 @@ $("#influence").change(function() {
             .duration(750)
             .attr("width",0);
 
-        d3.select("#swoo-en").style("display", "none")
+
 
     }
 });
@@ -318,12 +318,16 @@ $("#state").change(function() {
         d3.selectAll("rect.state")
             .transition()
             .duration(750)
-            .attr("width", function (d){ return x(d.value)})
+            .attr("width", function (d){ return x(d.value)});
+
+        d3.select("#swoo-en").style("display", "block")
     } else {
         d3.selectAll("rect.state")
             .transition()
             .duration(750)
-            .attr("width",0)
+            .attr("width",0);
+
+        d3.select("#swoo-en").style("display", "none")
     }
 });
 
