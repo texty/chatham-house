@@ -199,7 +199,7 @@ d3.csv("data/data_eng.csv", function(error, data){
             .draggable(false)
             .annotations(annotations);
 
-        var swoopySel = L.append('g').attr("id", "swoo").call(swoopy);
+        var swoopySel = L.append('g').attr("id", "swoo-en").call(swoopy);
 
         L.append('marker')
             .attr('id', 'arrow')
@@ -209,25 +209,26 @@ d3.csv("data/data_eng.csv", function(error, data){
             .attr('orient', 'auto')
             .append('path')
             .attr('d', 'M-6.75,-6.75 L 0,0 L -6.75,6.75')
-            .attr("fill", "white");
+            .attr("fill", "#597B7C");
 
 
-        $("#swoo").find("g").attr("transform", "translate(50,30)");
+        $("#swoo-en").find("g").attr("transform", "translate(50,30)");
 
         swoopySel.selectAll("path")
             .attr('marker-end', 'url(#arrow)')
             .each(function() {
                 d3.select(this)
                     .style("fill", "none")
-                    .style("stroke", "white");
+                    .style("stroke", "#597B7C");
             });
 
 
         swoopySel.selectAll("text")
             .each(function() {
                 d3.select(this)
-                    .style("font-size", "11px")
-                    .style("fill", "grey")
+                    .style("font-size", "12px")
+                    .style("font-style", "italic")
+                    .style("fill", "#597B7C")
                     .attr("class", function(d) {
                         return d.theClass
                     })
@@ -236,7 +237,7 @@ d3.csv("data/data_eng.csv", function(error, data){
 
 
 
-    }, 6000);
+    }, 600);
 
     tippy('.bar');
 
@@ -282,15 +283,18 @@ $("#influence").change(function() {
             .transition()
             .duration(750)
             .attr("width", function (d){ return x(d.value)})
-            .attr("fill", "#b32017")
-            ;
+            .attr("fill", "#b32017");
+
+        d3.select("#swoo-en").style("display", "block")
     } else {
         d3.selectAll("rect.influence")
             .classed("anim", false)
             .transition()
             .duration(750)
-            .attr("width",0)
-            ;
+            .attr("width",0);
+
+        d3.select("#swoo-en").style("display", "none")
+
     }
 });
 
@@ -324,30 +328,29 @@ $("#state").change(function() {
 });
 
 
-// var annotations = [
-//     {
-//         "sepalWidth": 2.3,
-//         "sepalLength": 2,
-//         "path": "",
-//         "text": "means 0",
-//         "theClass":"",
-//         "textOffset": [
-//             -49,
-//             133
-//         ]
-//     }
-//     , {
-//         "sepalWidth": 2.3,
-//         "sepalLength": 2,
-//         "path": "M-27,68L6,68",
-//         // "path": "M39,-6C61,-6,81,-5,93,-6",
-//         "text": "hover bars for details",
-//         "theClass":"rotate",
-//         "textOffset": [
-//             10,72
-//         ]
-//     }
-// ]
+var annotations = [
+    {
+        "sepalWidth": 2.3,
+        "sepalLength": 2,
+        "path": "",
+        "text": "no bar means 0",
+        "theClass":"",
+        "textOffset": [
+            -51,152
+        ]
+    }
+    , {
+        "sepalWidth": 2.3,
+        "sepalLength": 2,
+        // "path": "M-27,68L6,68",
+        "path": "M120,93C130,88,133,71,119,65",
+        "text": "hover bars for details",
+        "theClass":"rotate",
+        "textOffset": [
+            13,104
+        ]
+    }
+]
 
 
 

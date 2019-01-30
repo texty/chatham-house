@@ -126,4 +126,7 @@ g.tick line {
 g.tick text {
   fill: white; }
 
+#swoo-ru, #swoo-en {
+  display: none; }
+
 /*# sourceMappingURL=application.css.map */
