@@ -186,7 +186,13 @@ d3.csv("data/data_eng.csv", function(error, data){
     }, 1000);
 
 
-
+    d3.selectAll("rect.influence")
+        .classed("anim", true)
+        // .transition()
+        // .duration(750)
+        .attr("width", function (d){ return x(d.value)})
+        .attr("fill", "#b32017")
+    ;
 
     setTimeout(function(d){
 
@@ -219,7 +225,10 @@ d3.csv("data/data_eng.csv", function(error, data){
             .each(function() {
                 d3.select(this)
                     .style("fill", "none")
-                    .style("stroke", "#597B7C");
+                    .style("stroke", "#597B7C")
+                    .attr("class", function(d) {
+                        return d.theClass
+                    });
             });
 
 
@@ -285,6 +294,7 @@ $("#influence").change(function() {
             .attr("width", function (d){ return x(d.value)})
             .attr("fill", "#b32017");
 
+        d3.selectAll(".hoverMe").style("display", "block")
 
     } else {
         d3.selectAll("rect.influence")
@@ -293,6 +303,7 @@ $("#influence").change(function() {
             .duration(750)
             .attr("width",0);
 
+        d3.selectAll(".hoverMe").style("display", "none")
 
 
     }
@@ -338,7 +349,7 @@ var annotations = [
         "sepalLength": 2,
         "path": "",
         "text": "no bar means 0",
-        "theClass":"",
+        "theClass":"noBars",
         "textOffset": [
             -51,152
         ]
@@ -349,7 +360,7 @@ var annotations = [
         // "path": "M-27,68L6,68",
         "path": "M120,93C130,88,133,71,119,65",
         "text": "hover bars for details",
-        "theClass":"rotate",
+        "theClass":"hoverMe",
         "textOffset": [
             13,104
         ]
