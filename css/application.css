@@ -137,4 +137,7 @@ g.tick text {
 .fullbars {
   pointer-events: none; }
 
+.text.civil, .text.state {
+  display: none; }
+
 /*# sourceMappingURL=application.css.map */

@@ -216,14 +216,28 @@ d3.csv("data/data_eng.csv", function(error, data){
             }
 
         })
+        .attr("class",  function(d){
+            return "text " + d.myClass
+        })
         .attr("x", function (d){
-            return x(d.value) - 8})
+            if(d.value > 0){
+                return x(d.value) - 8
+            } else {
+                return x(0) + 2
+            }
+            })
         .attr("y", 8)
-        .attr("fill", "white")
+        .attr("fill", function (d){
+            if(d.value > 0){
+                return "white"
+            } else {
+                return "grey"
+            }
+        })
         .style("font-size", "10px")
         .text(function (d){
-            return d.value}
-        )
+            return d.value
+        });
     
 
     
@@ -267,94 +281,94 @@ d3.csv("data/data_eng.csv", function(error, data){
         .attr("fill", "#b32017")
     ;
 
-    setTimeout(function(d){
-
-
-        var L = d3.select("#en-0 svg");
-
-        var swoopy = d3.swoopyDrag()
-            .x(function(d) { return x(d.sepalWidth)})
-            .y(function(d) { return y(d.sepalLength)})
-            .draggable(false)
-            .annotations(annotations);
-
-        var swoopySel = L.append('g').attr("id", "swoo-en").call(swoopy);
-
-        L.append('marker')
-            .attr('id', 'arrow')
-            .attr('viewBox', '-10 -10 20 20')
-            .attr('markerWidth', 10)
-            .attr('markerHeight', 20)
-            .attr('orient', 'auto')
-            .append('path')
-            .attr('d', 'M-6.75,-6.75 L 0,0 L -6.75,6.75')
-            .attr("fill", "#597B7C");
-
-
-        $("#swoo-en").find("g").attr("transform", "translate(50,30)");
-
-        swoopySel.selectAll("path")
-            .attr('marker-end', 'url(#arrow)')
-            .each(function() {
-                d3.select(this)
-                    .style("fill", "none")
-                    .style("stroke", "#597B7C")
-                    .attr("class", function(d) {
-                        return d.theClass
-                    });
-            });
-
-
-        swoopySel.selectAll("text")
-            .each(function() {
-                d3.select(this)
-                    .style("font-size", "12px")
-                    .style("font-style", "italic")
-                    .style("fill", "#597B7C")
-                    .attr("class", function(d) {
-                        return d.theClass
-                    })
-                ;
-            })
-
-
-
-    }, 600);
+    // setTimeout(function(d){
+    //
+    //
+    //     var L = d3.select("#en-0 svg");
+    //
+    //     var swoopy = d3.swoopyDrag()
+    //         .x(function(d) { return x(d.sepalWidth)})
+    //         .y(function(d) { return y(d.sepalLength)})
+    //         .draggable(false)
+    //         .annotations(annotations);
+    //
+    //     var swoopySel = L.append('g').attr("id", "swoo-en").call(swoopy);
+    //
+    //     L.append('marker')
+    //         .attr('id', 'arrow')
+    //         .attr('viewBox', '-10 -10 20 20')
+    //         .attr('markerWidth', 10)
+    //         .attr('markerHeight', 20)
+    //         .attr('orient', 'auto')
+    //         .append('path')
+    //         .attr('d', 'M-6.75,-6.75 L 0,0 L -6.75,6.75')
+    //         .attr("fill", "#597B7C");
+    //
+    //
+    //     $("#swoo-en").find("g").attr("transform", "translate(50,30)");
+    //
+    //     swoopySel.selectAll("path")
+    //         .attr('marker-end', 'url(#arrow)')
+    //         .each(function() {
+    //             d3.select(this)
+    //                 .style("fill", "none")
+    //                 .style("stroke", "#597B7C")
+    //                 .attr("class", function(d) {
+    //                     return d.theClass
+    //                 });
+    //         });
+    //
+    //
+    //     swoopySel.selectAll("text")
+    //         .each(function() {
+    //             d3.select(this)
+    //                 .style("font-size", "12px")
+    //                 .style("font-style", "italic")
+    //                 .style("fill", "#597B7C")
+    //                 .attr("class", function(d) {
+    //                     return d.theClass
+    //                 })
+    //             ;
+    //         })
+    //
+    //
+    //
+    // }, 600);
 
     tippy('.bar');
 
 
-   $(".title").on("click", function(d) {
-        var targetID = $(this)
-            .parent()
-            .find(".childDIV")
-            .attr("id");
-
-        var check = $(this)
-            .parent()
-            .find(".childDIV")
-            .attr("value");
-
-        var test;
-        if(check === "true") {
-            test = "false";
-        } else {
-            test = "true";
-        }
-
-         d3.select("#"+targetID)
-            .attr("value", test)
-             .transition(t)
-             .duration(1000)
-            .style("height", function() {
-               if(check === "false") {
-                   return "210px";
-               } else {
-                   return "0px";
-               }
-            });
-
-    });
+   // $(".title").on("click", function(d) {
+   //      var targetID = $(this)
+   //          .parent()
+   //          .find(".childDIV")
+   //          .attr("id");
+   //
+   //      var check = $(this)
+   //          .parent()
+   //          .find(".childDIV")
+   //          .attr("value");
+   //
+   //      var test;
+   //      if(check === "true") {
+   //          test = "false";
+   //      } else {
+   //          test = "true";
+   //      }
+   //
+   //       d3.select("#"+targetID)
+   //          .attr("value", test)
+   //           .transition(t)
+   //           .duration(1000)
+   //          .style("height", function() {
+   //             if(check === "false") {
+   //                 return "210px";
+   //             } else {
+   //                 return "0px";
+   //             }
+   //          });
+   //
+   //  });
 });
 
 
@@ -367,7 +381,10 @@ $("#influence").change(function() {
             .attr("width", function (d){ return x(d.value)})
             .attr("fill", "#b32017");
 
-        d3.selectAll(".hoverMe").style("display", "block")
+        // d3.selectAll(".hoverMe").style("display", "block")
+        setTimeout(function() {
+        d3.selectAll("text.influence").style("display", "block")
+        }, 750)
 
     } else {
         d3.selectAll("rect.influence")
@@ -376,7 +393,10 @@ $("#influence").change(function() {
             .duration(750)
             .attr("width",0);
 
-        d3.selectAll(".hoverMe").style("display", "none")
+        // d3.selectAll(".hoverMe").style("display", "none")
+        d3.selectAll("text.influence").style("display", "none")
+
+
 
 
     }
@@ -388,12 +408,17 @@ $("#civil").change(function() {
         d3.selectAll("rect.civil")
             .transition()
             .duration(750)
-            .attr("width", function (d){ return x(d.value)})
+            .attr("width", function (d){ return x(d.value)});
+        setTimeout(function() {
+            d3.selectAll("text.civil").style("display", "block")
+        },750)
     } else {
         d3.selectAll("rect.civil")
             .transition()
             .duration(750)
-            .attr("width",0)
+            .attr("width",0);
+
+        d3.selectAll("text.civil").style("display", "none")
     }
 });
 
@@ -404,14 +429,19 @@ $("#state").change(function() {
             .duration(750)
             .attr("width", function (d){ return x(d.value)});
 
-        d3.select("#swoo-en").style("display", "block")
+        // d3.select("#swoo-en").style("display", "block")
+        setTimeout(function() {
+            d3.selectAll("text.state").style("display", "block")
+        },750)
+
     } else {
         d3.selectAll("rect.state")
             .transition()
             .duration(750)
             .attr("width",0);
 
-        d3.select("#swoo-en").style("display", "none")
+        // d3.select("#swoo-en").style("display", "none")
+        d3.selectAll("text.state").style("display", "none")
     }
 });
 
