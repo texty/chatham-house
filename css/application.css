@@ -61,7 +61,12 @@ body {
     background-color: rgba(89, 123, 124, 0.15);
     fill: #597B7C;
     cursor: pointer;
-    display: flex; }
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -o-flex;
+    display: flex;
+    flex: 1; }
   #contentContainer p {
     font-size: 14px;
     font-weight: 100; }
