@@ -236,6 +236,7 @@ d3.csv("data/data_eng.csv", function(error, data){
         .attr("fill", "#597B7C")
         .style("font-size", "14px")
         .attr("y", -3)
+        .attr("x", 0)
         ;
 
     //
