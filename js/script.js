@@ -230,7 +230,7 @@ d3.csv("data/data_eng.csv", function(error, data){
 
 
     box.append("text")
-        .html(function(d) {
+        .text(function(d) {
             return d.key
         })
         .attr("fill", "#597B7C")
