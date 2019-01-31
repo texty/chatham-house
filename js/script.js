@@ -416,29 +416,29 @@ $("#state").change(function() {
 });
 
 
-var annotations = [
-    {
-        "sepalWidth": 2.3,
-        "sepalLength": 2,
-        "path": "",
-        "text": "no color bar means 0",
-        "theClass":"noBars",
-        "textOffset": [
-            -51,152
-        ]
-    }
-    , {
-        "sepalWidth": 2.3,
-        "sepalLength": 2,
-        // "path": "M-27,68L6,68",
-        "path": "M120,93C130,88,133,71,119,65",
-        "text": "hover bars for details",
-        "theClass":"hoverMe",
-        "textOffset": [
-            13,104
-        ]
-    }
-]
+// var annotations = [
+//     {
+//         "sepalWidth": 2.3,
+//         "sepalLength": 2,
+//         "path": "",
+//         "text": "no color bar means 0",
+//         "theClass":"noBars",
+//         "textOffset": [
+//             -51,152
+//         ]
+//     }
+//     , {
+//         "sepalWidth": 2.3,
+//         "sepalLength": 2,
+//         // "path": "M-27,68L6,68",
+//         "path": "M120,93C130,88,133,71,119,65",
+//         "text": "hover bars for details",
+//         "theClass":"hoverMe",
+//         "textOffset": [
+//             13,104
+//         ]
+//     }
+// ]
 
 
 
