@@ -63,7 +63,7 @@ body {
     cursor: pointer;
     display: -webkit-flex;
     display: -moz-flex;
-    display: -ms-flex;
+    display: -ms-flexbox;
     display: -o-flex;
     display: flex;
     flex: 1; }
