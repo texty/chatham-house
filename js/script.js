@@ -88,7 +88,7 @@ d3.csv("data/data_eng.csv", function(error, data){
             // .style("background", "red")
             .style("height", "30px")
             .append("h2")
-            .html(function(d) {
+            .text(function(d) {
                 return d.key
             });
 
@@ -153,6 +153,78 @@ d3.csv("data/data_eng.csv", function(error, data){
         .attr("width", 0)
         .attr("height", barHeight);
 
+    box
+        .append("rect")
+        .attr("class", "fullbars")
+        .attr("transform", function(d, i) {
+                return "translate(" + 0 + "," + 0 + ")";
+
+
+        })
+        .attr("width", function (){ return x(5)})
+        .attr("fill", "#597B7C")
+        .style("opacity", "0.1")
+        .attr("height", barHeight);
+
+    box
+        .append("rect")
+        .attr("class", "fullbars")
+        .attr("transform", function(d, i) {
+            if(i === 1){
+                return "translate(" + 0 + "," + 13 + ")";
+            } else {
+                return "translate(" + 0 + "," + 13 + ")";
+            }
+
+        })
+        .attr("width", function (){ return x(5)})
+        .attr("fill", "#597B7C")
+        .style("opacity", "0.1")
+        .attr("height", barHeight);
+
+    box
+        .append("rect")
+        .attr("class", "fullbars")
+        .attr("transform", function(d, i) {
+            if(i === 1){
+                return "translate(" + 0 + "," + 26 + ")";
+            } else {
+                return "translate(" + 0 + "," + 26 + ")";
+            }
+
+        })
+        .attr("width", function (){ return x(5)})
+        .attr("fill", "#597B7C")
+        .style("opacity", "0.1")
+        .attr("height", barHeight);
+
+
+
+
+
+    box.selectAll("text")
+        .data(function(d) {
+            return d.values;
+        })
+        .enter()
+        .append("text")
+        .attr("transform", function(d, i) {
+            if(i === 1){
+                return "translate(" + 0 + "," + (i * 13) + ")";
+            } else {
+                return "translate(" + 0 + "," + (i * 13) + ")";
+            }
+
+        })
+        .attr("x", function (d){
+            return x(d.value) - 8})
+        .attr("y", 8)
+        .attr("fill", "white")
+        .style("font-size", "10px")
+        .text(function (d){
+            return d.value}
+        )
+    
 
     
 
@@ -348,7 +420,7 @@ var annotations = [
         "sepalWidth": 2.3,
         "sepalLength": 2,
         "path": "",
-        "text": "no bar means 0",
+        "text": "no color bar means 0",
         "theClass":"noBars",
         "textOffset": [
             -51,152
