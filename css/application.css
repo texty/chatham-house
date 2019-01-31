@@ -86,6 +86,7 @@ body {
         margin: 30px auto 30px 0;
         width: 60vw; } }
   #contentContainer p#footer {
+    text-align: justify;
     line-height: 1.4;
     width: 90vw;
     max-width: 1150px;
