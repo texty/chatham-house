@@ -1,0 +1,82 @@
+driver,country,measure,value,myClass
+Экономическая зависимость,Украина,Russian influence,3,influence
+Национальные меньшинства,Украина,Russian influence,4,influence
+Взаимосвязь элит,Украина,Russian influence,3,influence
+Медиа среда,Украина,Russian influence,4,influence
+Конфликт и безопасность,Украина,Russian influence,5,influence
+Коррупция,Украина,Russian influence,3,influence
+Политическая сфера,Украина,Russian influence,4,influence
+Православная церковь,Украина,Russian influence,3,influence
+Национальная идентичность,Украина,Russian influence,2,influence
+Экономическая зависимость,Беларусь,Russian influence,4,influence
+Национальные меньшинства,Беларусь,Russian influence,1,influence
+Взаимосвязь элит,Беларусь,Russian influence,3,influence
+Медиа среда,Беларусь,Russian influence,5,influence
+Конфликт и безопасность,Беларусь,Russian influence,4,influence
+Коррупция,Беларусь,Russian influence,1,influence
+Политическая сфера,Беларусь,Russian influence,3,influence
+Православная церковь,Беларусь,Russian influence,4,influence
+Национальная идентичность,Беларусь,Russian influence,5,influence
+Экономическая зависимость,Молдова,Russian influence,3,influence
+Национальные меньшинства,Молдова,Russian influence,4,influence
+Взаимосвязь элит,Молдова,Russian influence,3,influence
+Медиа среда,Молдова,Russian influence,5,influence
+Конфликт и безопасность,Молдова,Russian influence,3,influence
+Коррупция,Молдова,Russian influence,3,influence
+Политическая сфера,Молдова,Russian influence,4,influence
+Православная церковь,Молдова,Russian influence,5,influence
+Национальная идентичность,Молдова,Russian influence,4,influence
+Экономическая зависимость,Украина,State reponse,2,state
+Национальные меньшинства,Украина,State reponse,3,state
+Взаимосвязь элит,Украина,State reponse,4,state
+Медиа среда,Украина,State reponse,4,state
+Конфликт и безопасность,Украина,State reponse,4,state
+Коррупция,Украина,State reponse,3,state
+Политическая сфера,Украина,State reponse,2,state
+Православная церковь,Украина,State reponse,4,state
+Национальная идентичность,Украина,State reponse,4,state
+Экономическая зависимость,Беларусь,State reponse,1,state
+Национальные меньшинства,Беларусь,State reponse,2,state
+Взаимосвязь элит,Беларусь,State reponse,3,state
+Медиа среда,Беларусь,State reponse,2,state
+Конфликт и безопасность,Беларусь,State reponse,3,state
+Коррупция,Беларусь,State reponse,4,state
+Политическая сфера,Беларусь,State reponse,2,state
+Православная церковь,Беларусь,State reponse,3,state
+Национальная идентичность,Беларусь,State reponse,2,state
+Экономическая зависимость,Молдова,State reponse,0,state
+Национальные меньшинства,Молдова,State reponse,0,state
+Взаимосвязь элит,Молдова,State reponse,0,state
+Медиа среда,Молдова,State reponse,2,state
+Конфликт и безопасность,Молдова,State reponse,1,state
+Коррупция,Молдова,State reponse,0,state
+Политическая сфера,Молдова,State reponse,1,state
+Православная церковь,Молдова,State reponse,0,state
+Национальная идентичность,Молдова,State reponse,0,state
+Экономическая зависимость,Украина,SCO reponse,4,civil
+Национальные меньшинства,Украина,SCO reponse,3,civil
+Взаимосвязь элит,Украина,SCO reponse,0,civil
+Медиа среда,Украина,SCO reponse,4,civil
+Конфликт и безопасность,Украина,SCO reponse,4,civil
+Коррупция,Украина,SCO reponse,4,civil
+Политическая сфера,Украина,SCO reponse,2,civil
+Православная церковь,Украина,SCO reponse,0,civil
+Национальная идентичность,Украина,SCO reponse,2,civil
+Экономическая зависимость,Беларусь,SCO reponse,1,civil
+Национальные меньшинства,Беларусь,SCO reponse,0,civil
+Взаимосвязь элит,Беларусь,SCO reponse,3,civil
+Медиа среда,Беларусь,SCO reponse,2,civil
+Конфликт и безопасность,Беларусь,SCO reponse,2,civil
+Коррупция,Беларусь,SCO reponse,0,civil
+Политическая сфера,Беларусь,SCO reponse,2,civil
+Православная церковь,Беларусь,SCO reponse,0,civil
+Национальная идентичность,Беларусь,SCO reponse,4,civil
+Экономическая зависимость,Молдова,SCO reponse,0,civil
+Национальные меньшинства,Молдова,SCO reponse,1,civil
+Взаимосвязь элит,Молдова,SCO reponse,0,civil
+Медиа среда,Молдова,SCO reponse,5,civil
+Конфликт и безопасность,Молдова,SCO reponse,0,civil
+Коррупция,Молдова,SCO reponse,0,civil
+Политическая сфера,Молдова,SCO reponse,2,civil
+Православная церковь,Молдова,SCO reponse,0,civil
+Национальная идентичность,Молдова,SCO reponse,1,civil
