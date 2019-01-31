@@ -42,23 +42,13 @@ var xAxis = d3.axisBottom(y)
 
 
 
-d3.csv("data/data_eng.csv", function(error, data){
+d3.csv(data, function(error, data){
 
     data.forEach(function(d) {
         return d.value = +d.value;
     });
 
-    var myOrder = ["Russian influence", 'State response', 'SCO response'];
-
-
-    // data = data.sort(function(a, b) {
-    //     return myOrder.indexOf(a) - myOrder.indexOf(b);
-    // });
-
     var chartHeight = barHeight * 3 + gapBetweenGroups * 3;
-
-    // var groupHeight = barHeight * data.values.length;
-
 
 
     var dataset = d3.nest()
@@ -86,7 +76,7 @@ d3.csv("data/data_eng.csv", function(error, data){
     div.append("div")
         .attr("class", "title")
             // .style("background", "red")
-            .style("height", "30px")
+            .style("height", titleHeight)
             .append("h2")
             .text(function(d) {
                 return d.key
@@ -107,14 +97,10 @@ d3.csv("data/data_eng.csv", function(error, data){
 
 
 
-
-
     var barContainer = svg.append("g")
-        // .attr("width", chartWidth - m.left - m.right  + "px")
-        // .attr("height", "100%")
-    .attr("transform", function(d, i) {
-        return "translate(" + 0 +"," + 20 + ")";
-    });
+        .attr("transform", function(d, i) {
+            return "translate(" + 0 +"," + 20 + ")";
+        });
 
 
     var box = barContainer.selectAll("g")
@@ -249,22 +235,9 @@ d3.csv("data/data_eng.csv", function(error, data){
         })
         .attr("fill", "#597B7C")
         .style("font-size", "14px")
-        .attr("y", -3)
+        .attr("y", -4)
         .attr("x", 0)
         ;
-
-    //
-    // box.append("line")
-    //     .attr("x1", x(0))
-    //     .attr("x2", x(5))
-    //     .attr("y1", 14)
-    //     .attr("y2", 14)
-    //     .attr("stroke", "lightgrey")
-    //     .attr("stroke-dasharray", "4 2");
-
-
-
-
 
     setTimeout(function(d){
         d3.selectAll("rect.influence").attr("fill", "#b32017");
@@ -273,13 +246,36 @@ d3.csv("data/data_eng.csv", function(error, data){
     }, 1000);
 
 
-    d3.selectAll("rect.influence")
-        .classed("anim", true)
-        // .transition()
-        // .duration(750)
-        .attr("width", function (d){ return x(d.value)})
-        .attr("fill", "#b32017")
-    ;
+    if($('input#influence').is(":checked")){
+        setTimeout(function(){
+            d3.selectAll("rect.influence")
+                .attr("width", function (d) { console.log(d); return x(d.value)   })
+                .attr("fill", function (d) { console.log(d); return d.fill   })
+        },100)
+    }
+
+    // d3.selectAll("rect.influence")
+    //     .classed("anim", true)
+    //     // .transition()
+    //     // .duration(750)
+    //     .attr("width", function (d){ return x(d.value)})
+    //     .attr("fill", "#b32017")
+    // ;
+
+
+
+// $(document).ready(function() {
+//     if ($('input#state:checked')) {
+//         alert("State is checked");
+//     // d3.selectAll("rect.state")
+//     //     .transition()
+//     //     .duration(750)
+//     //     .attr("width", function (d) { console.log(d); return x(d.value)   })
+//     //     .attr("fill", "#005984");
+//     } else {
+//         alert("State is NOT");
+//     }
+// });
 
     // setTimeout(function(d){
     //
@@ -422,8 +418,11 @@ $("#civil").change(function() {
     }
 });
 
+
+
 $("#state").change(function() {
     if(this.checked) {
+        // sessionStorage.checked = true;
         d3.selectAll("rect.state")
             .transition()
             .duration(750)
@@ -435,6 +434,7 @@ $("#state").change(function() {
         },750)
 
     } else {
+        // sessionStorage.checked = false;
         d3.selectAll("rect.state")
             .transition()
             .duration(750)
@@ -472,48 +472,72 @@ $("#state").change(function() {
 
 
 
-dragElement(document.getElementsByClassName("svgContainer"));
 
-function dragElement(elmnt) {
-    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-    if (document.getElementById(elmnt.id + "header")) {
-        // if present, the header is where you move the DIV from:
-        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-    } else {
-        // otherwise, move the DIV from anywhere inside the DIV:
-        elmnt.onmousedown = dragMouseDown;
-    }
+//
+// $('input#state').change(function() {
+//      if(this.checked) {
+//          // alert("now i'm true")
+//          sessionStorage.checked = true;
+//     } else {
+//          // alert("now i'm false")
+//         sessionStorage.checked = false;
+//     }
+// });
+// //
+// $( document ).ready(function() {
+//     if(sessionStorage.checked === "true"){
+//         setTimeout(function(){
+//             d3.selectAll("rect.state")
+//                 // .transition()
+//                 // .duration(750)
+//                 .attr("width", function (d) { console.log(d);
+//                     // debugger;
+//                     return x(d.value)   })
+//                 .attr("fill", "#005984");
+//         }, 100);
+//         document.querySelector('input#state').checked = true;
+//
+//
+//
+//     } else {
+//         document.querySelector('input#state').checked = false;
+//         d3.selectAll("rect.state")
+//             .transition()
+//             .duration(750)
+//             .attr("width", function (d) { console.log(d); return x(d.value)   })
+//             .attr("fill", "#005984");
+//     }
+//
+// });
 
-    function dragMouseDown(e) {
-        e = e || window.event;
-        e.preventDefault();
-        // get the mouse cursor position at startup:
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        document.onmouseup = closeDragElement;
-        // call a function whenever the cursor moves:
-        document.onmousemove = elementDrag;
-    }
 
-    function elementDrag(e) {
-        e = e || window.event;
-        e.preventDefault();
-        // calculate the new cursor position:
-        pos1 = pos3 - e.clientX;
-        pos2 = pos4 - e.clientY;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        // set the element's new position:
-        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-    }
 
-    function closeDragElement() {
-        // stop moving when mouse button is released:
-        document.onmouseup = null;
-        document.onmousemove = null;
-    }
+function onClickBox() {
+    var arr = $('input').map(function() {
+        return this.checked;
+    }).get();
+    sessionStorage.setItem("checked", JSON.stringify(arr));
 }
 
+$(document).ready(function() {
+    var arr = JSON.parse(sessionStorage.getItem('checked')) || [];
+    arr.forEach(function(checked, i) {
+        $('input').eq(i).prop('checked', checked);
+        if($('input').eq(i).is(":checked")){
+            setTimeout(function(){
+            var currentID = $('input').eq(i)[0].id;
+            d3.selectAll("rect." + currentID)
+            // .transition()
+            // .duration(750)
+                .attr("width", function (d) { return x(d.value)   })
+                .attr("fill", function (d) { return d.fill   })
 
+                d3.selectAll("text." + currentID).style("display", "block")
+        },100)
+        }
+
+     });
+
+    $("input").click(onClickBox);
+});
 

@@ -1,82 +1,82 @@
-driver,country,measure,value,myClass
-Economic dependence,Ukraine,Russian influence,3,influence
-National minorities,Ukraine,Russian influence,4,influence
-Elite interconnection,Ukraine,Russian influence,3,influence
-Media environment,Ukraine,Russian influence,4,influence
-Conflict and security ,Ukraine,Russian influence,5,influence
-Corruption,Ukraine,Russian influence,3,influence
-Political sphere,Ukraine,Russian influence,4,influence
-Orthodox Church,Ukraine,Russian influence,3,influence
-National identity,Ukraine,Russian influence,2,influence
-Economic dependence,Belarus,Russian influence,4,influence
-National minorities,Belarus,Russian influence,1,influence
-Elite interconnection,Belarus,Russian influence,3,influence
-Media environment,Belarus,Russian influence,5,influence
-Conflict and security ,Belarus,Russian influence,4,influence
-Corruption,Belarus,Russian influence,1,influence
-Political sphere,Belarus,Russian influence,3,influence
-Orthodox Church,Belarus,Russian influence,4,influence
-National identity,Belarus,Russian influence,5,influence
-Economic dependence,Moldova,Russian influence,3,influence
-National minorities,Moldova,Russian influence,4,influence
-Elite interconnection,Moldova,Russian influence,3,influence
-Media environment,Moldova,Russian influence,5,influence
-Conflict and security ,Moldova,Russian influence,3,influence
-Corruption,Moldova,Russian influence,3,influence
-Political sphere,Moldova,Russian influence,4,influence
-Orthodox Church,Moldova,Russian influence,5,influence
-National identity,Moldova,Russian influence,4,influence
-Economic dependence,Ukraine,State reponse,2,state
-National minorities,Ukraine,State reponse,3,state
-Elite interconnection,Ukraine,State reponse,4,state
-Media environment,Ukraine,State reponse,4,state
-Conflict and security ,Ukraine,State reponse,4,state
-Corruption,Ukraine,State reponse,3,state
-Political sphere,Ukraine,State reponse,2,state
-Orthodox Church,Ukraine,State reponse,4,state
-National identity,Ukraine,State reponse,4,state
-Economic dependence,Belarus,State reponse,1,state
-National minorities,Belarus,State reponse,2,state
-Elite interconnection,Belarus,State reponse,3,state
-Media environment,Belarus,State reponse,2,state
-Conflict and security ,Belarus,State reponse,3,state
-Corruption,Belarus,State reponse,4,state
-Political sphere,Belarus,State reponse,2,state
-Orthodox Church,Belarus,State reponse,3,state
-National identity,Belarus,State reponse,2,state
-Economic dependence,Moldova,State reponse,0,state
-National minorities,Moldova,State reponse,0,state
-Elite interconnection,Moldova,State reponse,0,state
-Media environment,Moldova,State reponse,2,state
-Conflict and security ,Moldova,State reponse,1,state
-Corruption,Moldova,State reponse,0,state
-Political sphere,Moldova,State reponse,1,state
-Orthodox Church,Moldova,State reponse,0,state
-National identity,Moldova,State reponse,0,state
-Economic dependence,Ukraine,SCO reponse,4,civil
-National minorities,Ukraine,SCO reponse,3,civil
-Elite interconnection,Ukraine,SCO reponse,0,civil
-Media environment,Ukraine,SCO reponse,4,civil
-Conflict and security ,Ukraine,SCO reponse,4,civil
-Corruption,Ukraine,SCO reponse,4,civil
-Political sphere,Ukraine,SCO reponse,2,civil
-Orthodox Church,Ukraine,SCO reponse,0,civil
-National identity,Ukraine,SCO reponse,2,civil
-Economic dependence,Belarus,SCO reponse,1,civil
-National minorities,Belarus,SCO reponse,0,civil
-Elite interconnection,Belarus,SCO reponse,3,civil
-Media environment,Belarus,SCO reponse,2,civil
-Conflict and security ,Belarus,SCO reponse,2,civil
-Corruption,Belarus,SCO reponse,0,civil
-Political sphere,Belarus,SCO reponse,2,civil
-Orthodox Church,Belarus,SCO reponse,0,civil
-National identity,Belarus,SCO reponse,4,civil
-Economic dependence,Moldova,SCO reponse,0,civil
-National minorities,Moldova,SCO reponse,1,civil
-Elite interconnection,Moldova,SCO reponse,0,civil
-Media environment,Moldova,SCO reponse,5,civil
-Conflict and security ,Moldova,SCO reponse,0,civil
-Corruption,Moldova,SCO reponse,0,civil
-Political sphere,Moldova,SCO reponse,2,civil
-Orthodox Church,Moldova,SCO reponse,0,civil
-National identity,Moldova,SCO reponse,1,civil
+driver,country,measure,value,myClass,fill
+Economic dependence,Ukraine,Russian influence,3,influence,#b32017
+National minorities,Ukraine,Russian influence,4,influence,#b32017
+Elite interconnection,Ukraine,Russian influence,3,influence,#b32017
+Media environment,Ukraine,Russian influence,4,influence,#b32017
+Conflict and security ,Ukraine,Russian influence,5,influence,#b32017
+Corruption,Ukraine,Russian influence,3,influence,#b32017
+Political sphere,Ukraine,Russian influence,4,influence,#b32017
+Orthodox Church,Ukraine,Russian influence,3,influence,#b32017
+National identity,Ukraine,Russian influence,2,influence,#b32017
+Economic dependence,Belarus,Russian influence,4,influence,#b32017
+National minorities,Belarus,Russian influence,1,influence,#b32017
+Elite interconnection,Belarus,Russian influence,3,influence,#b32017
+Media environment,Belarus,Russian influence,5,influence,#b32017
+Conflict and security ,Belarus,Russian influence,4,influence,#b32017
+Corruption,Belarus,Russian influence,1,influence,#b32017
+Political sphere,Belarus,Russian influence,3,influence,#b32017
+Orthodox Church,Belarus,Russian influence,4,influence,#b32017
+National identity,Belarus,Russian influence,5,influence,#b32017
+Economic dependence,Moldova,Russian influence,3,influence,#b32017
+National minorities,Moldova,Russian influence,4,influence,#b32017
+Elite interconnection,Moldova,Russian influence,3,influence,#b32017
+Media environment,Moldova,Russian influence,5,influence,#b32017
+Conflict and security ,Moldova,Russian influence,3,influence,#b32017
+Corruption,Moldova,Russian influence,3,influence,#b32017
+Political sphere,Moldova,Russian influence,4,influence,#b32017
+Orthodox Church,Moldova,Russian influence,5,influence,#b32017
+National identity,Moldova,Russian influence,4,influence,#b32017
+Economic dependence,Ukraine,State reponse,2,state,#005984
+National minorities,Ukraine,State reponse,3,state,#005984
+Elite interconnection,Ukraine,State reponse,4,state,#005984
+Media environment,Ukraine,State reponse,4,state,#005984
+Conflict and security ,Ukraine,State reponse,4,state,#005984
+Corruption,Ukraine,State reponse,3,state,#005984
+Political sphere,Ukraine,State reponse,2,state,#005984
+Orthodox Church,Ukraine,State reponse,4,state,#005984
+National identity,Ukraine,State reponse,4,state,#005984
+Economic dependence,Belarus,State reponse,1,state,#005984
+National minorities,Belarus,State reponse,2,state,#005984
+Elite interconnection,Belarus,State reponse,3,state,#005984
+Media environment,Belarus,State reponse,2,state,#005984
+Conflict and security ,Belarus,State reponse,3,state,#005984
+Corruption,Belarus,State reponse,4,state,#005984
+Political sphere,Belarus,State reponse,2,state,#005984
+Orthodox Church,Belarus,State reponse,3,state,#005984
+National identity,Belarus,State reponse,2,state,#005984
+Economic dependence,Moldova,State reponse,0,state,#005984
+National minorities,Moldova,State reponse,0,state,#005984
+Elite interconnection,Moldova,State reponse,0,state,#005984
+Media environment,Moldova,State reponse,2,state,#005984
+Conflict and security ,Moldova,State reponse,1,state,#005984
+Corruption,Moldova,State reponse,0,state,#005984
+Political sphere,Moldova,State reponse,1,state,#005984
+Orthodox Church,Moldova,State reponse,0,state,#005984
+National identity,Moldova,State reponse,0,state,#005984
+Economic dependence,Ukraine,SCO reponse,4,civil,#00AEEF
+National minorities,Ukraine,SCO reponse,3,civil,#00AEEF
+Elite interconnection,Ukraine,SCO reponse,0,civil,#00AEEF
+Media environment,Ukraine,SCO reponse,4,civil,#00AEEF
+Conflict and security ,Ukraine,SCO reponse,4,civil,#00AEEF
+Corruption,Ukraine,SCO reponse,4,civil,#00AEEF
+Political sphere,Ukraine,SCO reponse,2,civil,#00AEEF
+Orthodox Church,Ukraine,SCO reponse,0,civil,#00AEEF
+National identity,Ukraine,SCO reponse,2,civil,#00AEEF
+Economic dependence,Belarus,SCO reponse,1,civil,#00AEEF
+National minorities,Belarus,SCO reponse,0,civil,#00AEEF
+Elite interconnection,Belarus,SCO reponse,3,civil,#00AEEF
+Media environment,Belarus,SCO reponse,2,civil,#00AEEF
+Conflict and security ,Belarus,SCO reponse,2,civil,#00AEEF
+Corruption,Belarus,SCO reponse,0,civil,#00AEEF
+Political sphere,Belarus,SCO reponse,2,civil,#00AEEF
+Orthodox Church,Belarus,SCO reponse,0,civil,#00AEEF
+National identity,Belarus,SCO reponse,4,civil,#00AEEF
+Economic dependence,Moldova,SCO reponse,0,civil,#00AEEF
+National minorities,Moldova,SCO reponse,1,civil,#00AEEF
+Elite interconnection,Moldova,SCO reponse,0,civil,#00AEEF
+Media environment,Moldova,SCO reponse,5,civil,#00AEEF
+Conflict and security ,Moldova,SCO reponse,0,civil,#00AEEF
+Corruption,Moldova,SCO reponse,0,civil,#00AEEF
+Political sphere,Moldova,SCO reponse,2,civil,#00AEEF
+Orthodox Church,Moldova,SCO reponse,0,civil,#00AEEF
+National identity,Moldova,SCO reponse,1,civil,#00AEEF

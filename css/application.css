@@ -7,6 +7,12 @@
 @font-face {
   font-family: Charter Italic;
   src: url(../fonts/chartercbolditalic.otf); }
+@font-face {
+  font-family: Proxima Regular;
+  src: url(../fonts/ProximaNova-Reg.otf); }
+@font-face {
+  font-family: Proxima Bold;
+  src: url(../fonts/ProximaNova-Bold.otf); }
 @keyframes color-change {
   0% {
     fill: #b32017; }
@@ -23,7 +29,7 @@
 
 body {
   font-size: 16px;
-  font-family: 'Charter', serif;
+  font-family: 'Proxima Regular', serif;
   font-weight: 100;
   color: #597B7C;
   min-height: 100vh;
@@ -36,7 +42,7 @@ body {
     width: 96vw;
     margin: 40px auto 4% 15px;
     display: grid;
-    grid-template-columns: auto 60px;
+    grid-template-columns: auto 120px;
     grid-auto-rows: auto; }
   #contentContainer #project-title {
     grid-column: 1/2;
