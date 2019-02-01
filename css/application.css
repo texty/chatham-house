@@ -126,11 +126,18 @@ body {
     #chartContainer {
       justify-content: space-between; } }
   @media (max-width: 825px) {
-    #chartContainer {
-      justify-content: space-between;
-      flex-wrap: nowrap;
-      width: 90%;
-      overflow-x: auto; } }
+    @supports (display: flex) and (flex-wrap: nowrap) {
+      #chartContainer {
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        width: 90%;
+        overflow-x: auto; } }
+    @supports not (flex-wrap: nowrap) {
+      #chartContainer {
+        display: grid;
+        width: 90%;
+        grid-template-columns: repeat(9, auto);
+        overflow-x: scroll; } } }
 
 span {
   color: lightgrey; }
@@ -145,7 +152,8 @@ span {
 .svgContainer {
   margin-right: 20px;
   width: 250px;
-  height: 250px; }
+  height: 250px;
+  float: right; }
 
 .childDIV {
   height: 210px;
