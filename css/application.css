@@ -114,9 +114,13 @@ body {
         width: 90%; } }
 
 #chartContainer {
+  display: -webkit-flex;
   display: flex;
   justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+  -webkit-flex-direction: row;
   flex-direction: row;
+  -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   width: 96vw;
   max-width: 1200px;
@@ -128,6 +132,7 @@ body {
   @media (max-width: 825px) {
     #chartContainer {
       justify-content: space-between;
+      -webkit-flex-wrap: nowrap;
       flex-wrap: nowrap;
       width: 90%;
       overflow-x: auto; } }
