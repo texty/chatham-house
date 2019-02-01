@@ -132,7 +132,8 @@ body {
     width: 96vw;
     max-width: 1200px;
     margin: 0 0 0 15px;
-    height: auto; }
+    height: auto;
+    white-space: normal; }
     @media (max-width: 1200px) {
       #chartContainer {
         justify-content: space-between; } }
