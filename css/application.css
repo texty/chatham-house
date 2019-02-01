@@ -72,6 +72,9 @@ body {
     grid-row: 1/2;
     cursor: pointer;
     display: flex; }
+    @media (max-width: 825px) {
+      #contentContainer #lang-button {
+        margin-bottom: 20px; } }
   #contentContainer #lang-button a {
     width: 50%;
     margin: auto; }
@@ -98,7 +101,7 @@ body {
     margin: auto auto 15px 0; }
     @media (max-width: 800px) {
       #contentContainer p.hint {
-        margin: 30px 20px 5px auto;
+        margin: 30px 8% 5px auto;
         width: 60vw; } }
   #contentContainer p#footer {
     text-align: justify;
@@ -168,7 +171,7 @@ g.tick text {
 .fullbars {
   pointer-events: none; }
 
-.text.civil, .text.state {
+.text.civil, .text.state, text.influence {
   display: none; }
 
 /*# sourceMappingURL=application.css.map */
