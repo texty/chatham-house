@@ -20,6 +20,12 @@
     fill: #8a2529; }
   100% {
     fill: #b32017; } }
+.mob {
+  display: none; }
+  @media (max-width: 825px) {
+    .mob {
+      display: block; } }
+
 .anim {
   animation: color-change 0.5s 5; }
 
@@ -37,6 +43,9 @@ body {
 
 #contentContainer {
   margin: auto; }
+  @media (max-width: 825px) {
+    #contentContainer {
+      max-width: 100%; } }
   #contentContainer #header {
     max-width: 1200px;
     width: 96vw;
@@ -44,6 +53,10 @@ body {
     display: grid;
     grid-template-columns: auto 120px;
     grid-auto-rows: auto; }
+    @media (max-width: 825px) {
+      #contentContainer #header {
+        display: block;
+        width: 90%; } }
   #contentContainer #project-title {
     grid-column: 1/2;
     grid-row: 1/2; }
@@ -57,12 +70,14 @@ body {
   #contentContainer #lang-button {
     grid-column: 2/3;
     grid-row: 1/2;
-    float: right;
     cursor: pointer;
     display: flex; }
   #contentContainer #lang-button a {
     width: 50%;
     margin: auto; }
+    @media (max-width: 825px) {
+      #contentContainer #lang-button a {
+        margin: 0; } }
   #contentContainer .title {
     background-color: rgba(89, 123, 124, 0.15);
     fill: #597B7C;
@@ -79,18 +94,21 @@ body {
   #contentContainer p.hint {
     max-width: 1200px;
     width: 90vw;
-    text-align: left;
+    text-align: right;
     margin: auto auto 15px 0; }
     @media (max-width: 800px) {
       #contentContainer p.hint {
-        margin: 30px auto 30px 0;
+        margin: 30px 20px 5px auto;
         width: 60vw; } }
   #contentContainer p#footer {
     text-align: justify;
     line-height: 1.6;
-    width: 90vw;
+    width: 92vw;
     max-width: 1150px;
     margin: 5px auto 5% 15px; }
+    @media (max-width: 825px) {
+      #contentContainer p#footer {
+        width: 90%; } }
 
 #chartContainer {
   display: flex;
@@ -104,6 +122,12 @@ body {
   @media (max-width: 1200px) {
     #chartContainer {
       justify-content: space-between; } }
+  @media (max-width: 825px) {
+    #chartContainer {
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      width: 90%;
+      overflow-x: auto; } }
 
 span {
   color: lightgrey; }

@@ -249,8 +249,8 @@ d3.csv(data, function(error, data){
     if($('input#influence').is(":checked")){
         setTimeout(function(){
             d3.selectAll("rect.influence")
-                .attr("width", function (d) { console.log(d); return x(d.value)   })
-                .attr("fill", function (d) { console.log(d); return d.fill   })
+                .attr("width", function (d) {  return x(d.value)   })
+                .attr("fill", function (d) { return d.fill   })
         },100)
     }
 
