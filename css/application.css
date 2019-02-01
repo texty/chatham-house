@@ -190,4 +190,8 @@ g.tick text {
 .text.civil, .text.state, text.influence {
   display: none; }
 
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  label {
+    font-size: 13px; } }
+
 /*# sourceMappingURL=application.css.map */
