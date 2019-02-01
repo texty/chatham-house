@@ -130,12 +130,18 @@ body {
     #chartContainer {
       justify-content: space-between; } }
   @media (max-width: 825px) {
-    #chartContainer {
-      justify-content: space-between;
-      -webkit-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-      width: 90%;
-      overflow-x: auto; } }
+    @supports (display: flex) {
+      #chartContainer {
+        justify-content: space-between;
+        -webkit-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        width: 90%;
+        overflow-x: auto; } }
+    @supports not (flex-wrap: nowrap) {
+      #chartContainer {
+        width: 90%;
+        overflow: auto;
+        white-space: nowrap; } } }
 
 span {
   color: lightgrey; }
@@ -151,6 +157,10 @@ span {
   margin-right: 20px;
   width: 250px;
   height: 250px; }
+  @media (max-width: 825px) {
+    @supports not (flex-wrap: nowrap) {
+      .svgContainer {
+        display: inline-block; } } }
 
 .childDIV {
   height: 210px;
