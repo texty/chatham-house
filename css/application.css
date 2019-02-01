@@ -76,7 +76,16 @@ body {
       #contentContainer #lang-button {
         margin-bottom: 20px; } }
   #contentContainer #lang-button a {
-    width: 50%;
+    text-decoration: none;
+    color: #597B7C;
+    font-weight: 800;
+    width: 40px;
+    display: block;
+    display: flex;
+    height: 40px;
+    border: 2px solid #597B7C;
+    border-radius: 50%;
+    text-align: center;
     margin: auto; }
     @media (max-width: 825px) {
       #contentContainer #lang-button a {
