@@ -113,12 +113,12 @@ body {
       #contentContainer p#footer {
         width: 90%; } }
 
-@supports not (flex-wrap: nowrap) {
-  #chartContainer {
-    margin: 0 0 0 15px;
-    width: 90vw;
-    overflow: auto;
-    white-space: nowrap; } }
+#chartContainer {
+  margin: 0 0 0 15px;
+  width: 90vw;
+  overflow: auto;
+  white-space: nowrap; }
+
 @supports (flex-wrap: nowrap) {
   #chartContainer {
     display: -webkit-flex;
@@ -153,10 +153,10 @@ span {
 .bar:hover {
   opacity: 1; }
 
-@supports not (flex-wrap: nowrap) {
-  .svgContainer {
-    display: inline-block;
-    margin-right: 20px; } }
+.svgContainer {
+  display: inline-block;
+  margin-right: 20px; }
+
 @supports (flex-wrap: nowrap) {
   .svgContainer {
     margin-right: 20px;
