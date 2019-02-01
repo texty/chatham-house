@@ -154,7 +154,8 @@ span {
 
 @supports not (display: flex) {
   .svgContainer {
-    display: inline-block; } }
+    display: inline-block;
+    margin-right: 20px; } }
 @supports (display: flex) {
   .svgContainer {
     margin-right: 20px;
