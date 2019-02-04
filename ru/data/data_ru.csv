@@ -1,7 +1,7 @@
 driver,country,measure,value,myClass,fill
 Экономическая зависимость,Украина,Russian influence,3,influence,#b32017
-Национальные меньшинства,Украина,Russian influence,4,influence,#b32017
-Взаимосвязь элит,Украина,Russian influence,3,influence,#b32017
+Национальные меньшинства,Украина,Russian influence,3,influence,#b32017
+Взаимосвязь элит,Украина,Russian influence,2,influence,#b32017
 Медиа среда,Украина,Russian influence,4,influence,#b32017
 Конфликт и безопасность,Украина,Russian influence,5,influence,#b32017
 Коррупция,Украина,Russian influence,3,influence,#b32017
@@ -26,9 +26,9 @@ driver,country,measure,value,myClass,fill
 Политическая сфера,Молдова,Russian influence,4,influence,#b32017
 Православная церковь,Молдова,Russian influence,5,influence,#b32017
 Национальная идентичность,Молдова,Russian influence,4,influence,#b32017
-Экономическая зависимость,Украина,State reponse,2,state,#005984
-Национальные меньшинства,Украина,State reponse,3,state,#005984
-Взаимосвязь элит,Украина,State reponse,4,state,#005984
+Экономическая зависимость,Украина,State reponse,4,state,#005984
+Национальные меньшинства,Украина,State reponse,2,state,#005984
+Взаимосвязь элит,Украина,State reponse,3,state,#005984
 Медиа среда,Украина,State reponse,4,state,#005984
 Конфликт и безопасность,Украина,State reponse,4,state,#005984
 Коррупция,Украина,State reponse,3,state,#005984
@@ -53,8 +53,8 @@ driver,country,measure,value,myClass,fill
 Политическая сфера,Молдова,State reponse,1,state,#005984
 Православная церковь,Молдова,State reponse,0,state,#005984
 Национальная идентичность,Молдова,State reponse,0,state,#005984
-Экономическая зависимость,Украина,SCO reponse,4,civil,#00AEEF
-Национальные меньшинства,Украина,SCO reponse,3,civil,#00AEEF
+Экономическая зависимость,Украина,SCO reponse,2,civil,#00AEEF
+Национальные меньшинства,Украина,SCO reponse,2,civil,#00AEEF
 Взаимосвязь элит,Украина,SCO reponse,0,civil,#00AEEF
 Медиа среда,Украина,SCO reponse,4,civil,#00AEEF
 Конфликт и безопасность,Украина,SCO reponse,4,civil,#00AEEF
@@ -63,7 +63,7 @@ driver,country,measure,value,myClass,fill
 Православная церковь,Украина,SCO reponse,0,civil,#00AEEF
 Национальная идентичность,Украина,SCO reponse,2,civil,#00AEEF
 Экономическая зависимость,Беларусь,SCO reponse,1,civil,#00AEEF
-Национальные меньшинства,Беларусь,SCO reponse,0,civil,#00AEEF
+Национальные меньшинства,Беларусь,SCO reponse,1,civil,#00AEEF
 Взаимосвязь элит,Беларусь,SCO reponse,3,civil,#00AEEF
 Медиа среда,Беларусь,SCO reponse,2,civil,#00AEEF
 Конфликт и безопасность,Беларусь,SCO reponse,2,civil,#00AEEF
