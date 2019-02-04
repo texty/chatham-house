@@ -1,18 +1,15 @@
 @font-face {
-  font-family: Charter;
-  src: url(../fonts/charteritc.otf); }
+  font-family: Proxima;
+  font-weight: normal;
+  src: url("../fonts/ProximaNovaRegular.eot") format("embedded-opentype");
+  src: url("../fonts/ProximaNova-Reg.otf") format("opentype");
+  src: url("../fonts/ProximaNovaRegular.ttf") format("trutype"); }
 @font-face {
-  font-family: Charter Bold;
-  src: url(../fonts/charterblackc.otf); }
-@font-face {
-  font-family: Charter Italic;
-  src: url(../fonts/chartercbolditalic.otf); }
-@font-face {
-  font-family: Proxima Regular;
-  src: url(../fonts/ProximaNova-Reg.otf); }
-@font-face {
-  font-family: Proxima Bold;
-  src: url(../fonts/ProximaNova-Bold.otf); }
+  font-family: Proxima;
+  font-weight: bold;
+  src: url("../fonts/ProximaNovaBold.eot") format("embedded-opentype");
+  src: url("../fonts/ProximaNova-Bold.otf") format("opentype");
+  src: url("../fonts/ProximaNovaBold.ttf") format("truetype"); }
 @keyframes color-change {
   0% {
     fill: #b32017; }
@@ -35,7 +32,7 @@
 
 body {
   font-size: 16px;
-  font-family: 'Proxima Regular', serif;
+  font-family: 'Proxima', serif;
   font-weight: 100;
   color: #597B7C;
   min-height: 100vh;
@@ -70,8 +67,7 @@ body {
   #contentContainer #lang-button {
     grid-column: 2/3;
     grid-row: 1/2;
-    cursor: pointer;
-    display: flex; }
+    cursor: pointer; }
     @media (max-width: 825px) {
       #contentContainer #lang-button {
         margin-bottom: 20px; } }
@@ -133,17 +129,21 @@ body {
   @media (max-width: 1200px) {
     #chartContainer {
       justify-content: space-between; } }
-  #chartContainer span {
-    color: lightgrey; }
-  #chartContainer .bar {
-    opacity: 0.8;
-    cursor: pointer; }
-  #chartContainer .bar:hover {
-    opacity: 1; }
-  #chartContainer .svgContainer {
-    margin-right: 20px;
-    width: 250px;
-    height: 250px; }
+
+span {
+  color: lightgrey; }
+
+.bar {
+  opacity: 0.8;
+  cursor: pointer; }
+
+.bar:hover {
+  opacity: 1; }
+
+.svgContainer {
+  margin-right: 20px;
+  width: 250px;
+  height: 250px; }
 
 .childDIV {
   height: 210px;
