@@ -67,7 +67,8 @@ body {
   #contentContainer #lang-button {
     grid-column: 2/3;
     grid-row: 1/2;
-    cursor: pointer; }
+    cursor: pointer;
+    text-align: left; }
     @media (max-width: 825px) {
       #contentContainer #lang-button {
         margin-bottom: 20px;
