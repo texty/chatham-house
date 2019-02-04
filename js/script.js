@@ -139,31 +139,31 @@ d3.csv(data, function(error, data){
             if(window.innerWidth < 800 && currentLanguage === "eng"){
                 if(d.measure === "Russian influence"){
                     if(d.value === 1){
-                        return "minimal level of influence: "+ d.value + " from 5 <br>(based on interviews with experts in the target countries)"
+                        return "minimal level of influence: "+ d.value + " from 5 (based on interviews with experts in the target countries)"
                     } else if(d.value === 2){
-                        return "moderate level of influence: "+ d.value + " from 5 <br>(based on interviews with experts in the target countries)"
+                        return "moderate level of influence: "+ d.value + " from 5 (based on interviews with experts in the target countries)"
                     } else if(d.value === 3){
-                        return "substantial level of influence: "+ d.value + " from 5 <br>(based on interviews with experts in the target countries)"
+                        return "substantial level of influence: "+ d.value + " from 5 (based on interviews with experts in the target countries)"
                     } else if(d.value === 4){
-                        return "critical level of influence: "+ d.value + " from 5 <br>(based on interviews with experts in the target countries)"
+                        return "critical level of influence: "+ d.value + " from 5 (based on interviews with experts in the target countries)"
                     } else if(d.value === 5){
-                        return "most prevalent level of influence: "+ d.value + " from 5 <br>(based on interviews with experts in the target countries)"
+                        return "most prevalent level of influence: "+ d.value + " from 5 (based on interviews with experts in the target countries)"
                     }
 
                 } else {
                     if(d.value === 1){
-                        return "minimal response: "+ d.value + " from 5 <br>(based on interviews with experts in the target countries)"
+                        return "minimal response: "+ d.value + " from 5 (based on interviews with experts in the target countries)"
                     } else if(d.value === 2){
-                        return "mild response: "+ d.value + " from 5 <br>(based on interviews with experts in the target countries)"
+                        return "mild response: "+ d.value + " from 5 (based on interviews with experts in the target countries)"
                     } else if(d.value === 3){
-                        return "moderate effort: "+ d.value + " from 5 <br>(based on interviews with experts in the target countries)"
+                        return "moderate effort: "+ d.value + " from 5 (based on interviews with experts in the target countries)"
                     } else if(d.value === 4){
-                        return "substantial effort: "+ d.value + " from 5 <br>(based on interviews with experts in the target countries)"
+                        return "substantial effort: "+ d.value + " from 5 (based on interviews with experts in the target countries)"
                     } else if(d.value === 5){
-                        return "high-level effective effort: "+ d.value + " from 5 <br>(based on interviews with experts in the target countries)"
+                        return "high-level effective effort: "+ d.value + " from 5 (based on interviews with experts in the target countries)"
                     }
                     else if(d.value === 0){
-                        return "no response: "+ d.value + " from 5 <br>(based on interviews with experts in the target countries)"
+                        return "no response: "+ d.value + " from 5 (based on interviews with experts in the target countries)"
                     }
                 }
 
@@ -299,7 +299,9 @@ d3.csv(data, function(error, data){
 
 
 
-    tippy('.bar');
+    tippy('.bar', {
+        theme: 'tomato'
+    })
 
 });
 

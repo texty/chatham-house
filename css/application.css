@@ -179,5 +179,8 @@ g.tick text {
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
   label {
     font-size: 13px; } }
+.tippy-tooltip.tomato-theme {
+  max-width: 200px;
+  text-align: left; }
 
 /*# sourceMappingURL=application.css.map */
