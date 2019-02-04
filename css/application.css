@@ -141,6 +141,7 @@ span {
   color: lightgrey; }
 
 .bar {
+  outline: none;
   opacity: 0.8;
   cursor: pointer; }
 
@@ -172,6 +173,9 @@ g.tick text {
 
 #swoo-ru, #swoo-en {
   display: none; }
+
+.fullbars {
+  outline: none; }
 
 .text.civil, .text.state, .text.influence {
   display: none; }
