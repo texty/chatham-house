@@ -2,16 +2,12 @@
   font-family: Proxima;
   font-weight: normal;
   src: url("../fonts/ProximaNovaRegular.eot") format("embedded-opentype");
-  src: url("../fonts/ProximaNova-Reg.otf") format("opentype");
-  src: url("../fonts/ProximaNovaRegular.ttf") format("trutype");
-  src: url("../fonts/ProximaNovaReg.woff") format("woff"); }
+  src: url("../fonts/ProximaNova-Reg.otf") format("opentype"); }
 @font-face {
   font-family: Proxima;
   font-weight: bold;
   src: url("../fonts/ProximaNovaBold.eot") format("embedded-opentype");
-  src: url("../fonts/ProximaNova-Bold.otf") format("opentype");
-  src: url("../fonts/ProximaNovaBold.ttf") format("truetype");
-  src: url("../fonts/ProximaNovaBold.woff") format("woff"); }
+  src: url("../fonts/ProximaNova-Bold.otf") format("opentype"); }
 @keyframes color-change {
   0% {
     fill: #b32017; }
