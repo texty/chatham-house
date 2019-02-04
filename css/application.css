@@ -67,6 +67,7 @@ body {
     grid-column: 1/2;
     max-width: 1200px; }
   #contentContainer #lang-button {
+    width: 50px;
     grid-column: 2/3;
     grid-row: 1/2;
     cursor: pointer;
