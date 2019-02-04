@@ -172,9 +172,6 @@ g.tick text {
 #swoo-ru, #swoo-en {
   display: none; }
 
-.fullbars {
-  pointer-events: none; }
-
 .text.civil, .text.state, text.influence {
   display: none; }
 

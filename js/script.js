@@ -135,25 +135,73 @@ d3.csv(data, function(error, data){
             }
 
         })
-        .attr("data-tippy-content", function (d){ return d.value + " from 5"})
+        .attr("data-tippy-content", function (d){
+            if(window.innerWidth < 800 && currentLanguage === "eng"){
+                if(d.measure === "Russian influence"){
+                    if(d.value === 1){
+                        return "minimal level of influence: "+ d.value + " from 5 <br>(based on interviews with experts in the target countries)"
+                    } else if(d.value === 2){
+                        return "moderate level of influence: "+ d.value + " from 5 <br>(based on interviews with experts in the target countries)"
+                    } else if(d.value === 3){
+                        return "substantial level of influence: "+ d.value + " from 5 <br>(based on interviews with experts in the target countries)"
+                    } else if(d.value === 4){
+                        return "critical level of influence: "+ d.value + " from 5 <br>(based on interviews with experts in the target countries)"
+                    } else if(d.value === 5){
+                        return "most prevalent level of influence: "+ d.value + " from 5 <br>(based on interviews with experts in the target countries)"
+                    }
+
+                } else {
+                    if(d.value === 1){
+                        return "minimal response: "+ d.value + " from 5 <br>(based on interviews with experts in the target countries)"
+                    } else if(d.value === 2){
+                        return "mild response: "+ d.value + " from 5 <br>(based on interviews with experts in the target countries)"
+                    } else if(d.value === 3){
+                        return "moderate effort: "+ d.value + " from 5 <br>(based on interviews with experts in the target countries)"
+                    } else if(d.value === 4){
+                        return "substantial effort: "+ d.value + " from 5 <br>(based on interviews with experts in the target countries)"
+                    } else if(d.value === 5){
+                        return "high-level effective effort: "+ d.value + " from 5 <br>(based on interviews with experts in the target countries)"
+                    }
+                    else if(d.value === 0){
+                        return "no response: "+ d.value + " from 5 <br>(based on interviews with experts in the target countries)"
+                    }
+                }
+
+            } else {
+                return d.value + " " + prefix + " 5"
+            }
+        })
         .attr("width", 0)
-        .attr("height", barHeight);
+        .attr("height", barHeight)
+        .attr("fill", function (d) {
+            if (d.value != 0){
+                return d.fill
+            } else {
+                return "#597B7C"
+            }
+        })
+        .style("opacity", function (d) {
+            if (d.value != 0){
+                return 0.8
+            } else {
+                return 0
+            }
+        });
 
     box
-        .append("rect")
+        .insert("rect", ".bar")
         .attr("class", "fullbars")
         .attr("transform", function(d, i) {
                 return "translate(" + 0 + "," + 0 + ")";
-
-
         })
-        .attr("width", function (){ return x(5)})
+        .attr("width", function (d){ return x(5)})
         .attr("fill", "#597B7C")
         .style("opacity", "0.1")
         .attr("height", barHeight);
 
+
     box
-        .append("rect")
+        .insert("rect", ".bar")
         .attr("class", "fullbars")
         .attr("transform", function(d, i) {
             if(i === 1){
@@ -169,7 +217,7 @@ d3.csv(data, function(error, data){
         .attr("height", barHeight);
 
     box
-        .append("rect")
+        .insert("rect", ".bar")
         .attr("class", "fullbars")
         .attr("transform", function(d, i) {
             if(i === 1){
@@ -239,132 +287,19 @@ d3.csv(data, function(error, data){
         .attr("x", 0)
         ;
 
-    setTimeout(function(d){
-        d3.selectAll("rect.influence").attr("fill", "#b32017");
-        d3.selectAll("rect.state").attr("fill", "#005984");
-        d3.selectAll("rect.civil").attr("fill", "#00AEEF");
-    }, 1000);
-
 
     if($('input#influence').is(":checked")){
         setTimeout(function(){
             d3.selectAll("rect.influence")
                 .attr("width", function (d) {  return x(d.value)   })
-                .attr("fill", function (d) { return d.fill   })
-        },100)
+        },100);
+        d3.selectAll("text.influence").style("display", "block")
     }
 
-    // d3.selectAll("rect.influence")
-    //     .classed("anim", true)
-    //     // .transition()
-    //     // .duration(750)
-    //     .attr("width", function (d){ return x(d.value)})
-    //     .attr("fill", "#b32017")
-    // ;
 
-
-
-// $(document).ready(function() {
-//     if ($('input#state:checked')) {
-//         alert("State is checked");
-//     // d3.selectAll("rect.state")
-//     //     .transition()
-//     //     .duration(750)
-//     //     .attr("width", function (d) { console.log(d); return x(d.value)   })
-//     //     .attr("fill", "#005984");
-//     } else {
-//         alert("State is NOT");
-//     }
-// });
-
-    // setTimeout(function(d){
-    //
-    //
-    //     var L = d3.select("#en-0 svg");
-    //
-    //     var swoopy = d3.swoopyDrag()
-    //         .x(function(d) { return x(d.sepalWidth)})
-    //         .y(function(d) { return y(d.sepalLength)})
-    //         .draggable(false)
-    //         .annotations(annotations);
-    //
-    //     var swoopySel = L.append('g').attr("id", "swoo-en").call(swoopy);
-    //
-    //     L.append('marker')
-    //         .attr('id', 'arrow')
-    //         .attr('viewBox', '-10 -10 20 20')
-    //         .attr('markerWidth', 10)
-    //         .attr('markerHeight', 20)
-    //         .attr('orient', 'auto')
-    //         .append('path')
-    //         .attr('d', 'M-6.75,-6.75 L 0,0 L -6.75,6.75')
-    //         .attr("fill", "#597B7C");
-    //
-    //
-    //     $("#swoo-en").find("g").attr("transform", "translate(50,30)");
-    //
-    //     swoopySel.selectAll("path")
-    //         .attr('marker-end', 'url(#arrow)')
-    //         .each(function() {
-    //             d3.select(this)
-    //                 .style("fill", "none")
-    //                 .style("stroke", "#597B7C")
-    //                 .attr("class", function(d) {
-    //                     return d.theClass
-    //                 });
-    //         });
-    //
-    //
-    //     swoopySel.selectAll("text")
-    //         .each(function() {
-    //             d3.select(this)
-    //                 .style("font-size", "12px")
-    //                 .style("font-style", "italic")
-    //                 .style("fill", "#597B7C")
-    //                 .attr("class", function(d) {
-    //                     return d.theClass
-    //                 })
-    //             ;
-    //         })
-    //
-    //
-    //
-    // }, 600);
 
     tippy('.bar');
 
-
-   // $(".title").on("click", function(d) {
-   //      var targetID = $(this)
-   //          .parent()
-   //          .find(".childDIV")
-   //          .attr("id");
-   //
-   //      var check = $(this)
-   //          .parent()
-   //          .find(".childDIV")
-   //          .attr("value");
-   //
-   //      var test;
-   //      if(check === "true") {
-   //          test = "false";
-   //      } else {
-   //          test = "true";
-   //      }
-   //
-   //       d3.select("#"+targetID)
-   //          .attr("value", test)
-   //           .transition(t)
-   //           .duration(1000)
-   //          .style("height", function() {
-   //             if(check === "false") {
-   //                 return "210px";
-   //             } else {
-   //                 return "0px";
-   //             }
-   //          });
-   //
-   //  });
 });
 
 
@@ -374,10 +309,10 @@ $("#influence").change(function() {
             .classed("anim", true)
             .transition()
             .duration(750)
-            .attr("width", function (d){ return x(d.value)})
-            .attr("fill", "#b32017");
+            .attr("width", function (d) {  return x(d.value) });
 
-        // d3.selectAll(".hoverMe").style("display", "block")
+
+
         setTimeout(function() {
         d3.selectAll("text.influence").style("display", "block")
         }, 750)
@@ -388,8 +323,6 @@ $("#influence").change(function() {
             .transition()
             .duration(750)
             .attr("width",0);
-
-        // d3.selectAll(".hoverMe").style("display", "none")
         d3.selectAll("text.influence").style("display", "none")
 
 
@@ -404,7 +337,14 @@ $("#civil").change(function() {
         d3.selectAll("rect.civil")
             .transition()
             .duration(750)
-            .attr("width", function (d){ return x(d.value)});
+            .attr("width", function (d) {
+                if (d.value != 0){
+                    return x(d.value)
+                } else {
+                    return x(5)
+                }
+            });
+
         setTimeout(function() {
             d3.selectAll("text.civil").style("display", "block")
         },750)
@@ -426,9 +366,14 @@ $("#state").change(function() {
         d3.selectAll("rect.state")
             .transition()
             .duration(750)
-            .attr("width", function (d){ return x(d.value)});
+            .attr("width", function (d) {
+                if (d.value != 0){
+                    return x(d.value)
+                } else {
+                    return x(5)
+                }
+            });
 
-        // d3.select("#swoo-en").style("display", "block")
         setTimeout(function() {
             d3.selectAll("text.state").style("display", "block")
         },750)
@@ -440,75 +385,10 @@ $("#state").change(function() {
             .duration(750)
             .attr("width",0);
 
-        // d3.select("#swoo-en").style("display", "none")
         d3.selectAll("text.state").style("display", "none")
     }
 });
 
-
-// var annotations = [
-//     {
-//         "sepalWidth": 2.3,
-//         "sepalLength": 2,
-//         "path": "",
-//         "text": "no color bar means 0",
-//         "theClass":"noBars",
-//         "textOffset": [
-//             -51,152
-//         ]
-//     }
-//     , {
-//         "sepalWidth": 2.3,
-//         "sepalLength": 2,
-//         // "path": "M-27,68L6,68",
-//         "path": "M120,93C130,88,133,71,119,65",
-//         "text": "hover bars for details",
-//         "theClass":"hoverMe",
-//         "textOffset": [
-//             13,104
-//         ]
-//     }
-// ]
-
-
-
-
-//
-// $('input#state').change(function() {
-//      if(this.checked) {
-//          // alert("now i'm true")
-//          sessionStorage.checked = true;
-//     } else {
-//          // alert("now i'm false")
-//         sessionStorage.checked = false;
-//     }
-// });
-// //
-// $( document ).ready(function() {
-//     if(sessionStorage.checked === "true"){
-//         setTimeout(function(){
-//             d3.selectAll("rect.state")
-//                 // .transition()
-//                 // .duration(750)
-//                 .attr("width", function (d) { console.log(d);
-//                     // debugger;
-//                     return x(d.value)   })
-//                 .attr("fill", "#005984");
-//         }, 100);
-//         document.querySelector('input#state').checked = true;
-//
-//
-//
-//     } else {
-//         document.querySelector('input#state').checked = false;
-//         d3.selectAll("rect.state")
-//             .transition()
-//             .duration(750)
-//             .attr("width", function (d) { console.log(d); return x(d.value)   })
-//             .attr("fill", "#005984");
-//     }
-//
-// });
 
 
 
@@ -526,11 +406,16 @@ $(document).ready(function() {
         if($('input').eq(i).is(":checked")){
             setTimeout(function(){
             var currentID = $('input').eq(i)[0].id;
+                console.log(currentID)
             d3.selectAll("rect." + currentID)
-            // .transition()
-            // .duration(750)
-                .attr("width", function (d) { return x(d.value)   })
-                .attr("fill", function (d) { return d.fill   })
+                .attr("width", function (d) {
+                    if (d.value != 0){
+                        return x(d.value)
+                    } else {
+                        return x(5)
+                    }
+                });
+
 
                 d3.selectAll("text." + currentID).style("display", "block")
         },100)
