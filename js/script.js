@@ -294,6 +294,7 @@ d3.csv(data, function(error, data){
                 .attr("width", function (d) {  return x(d.value)   })
         },100);
         d3.selectAll("text.influence").style("display", "block")
+
     }
 
 
@@ -406,7 +407,6 @@ $(document).ready(function() {
         if($('input').eq(i).is(":checked")){
             setTimeout(function(){
             var currentID = $('input').eq(i)[0].id;
-                console.log(currentID)
             d3.selectAll("rect." + currentID)
                 .attr("width", function (d) {
                     if (d.value != 0){
@@ -415,11 +415,9 @@ $(document).ready(function() {
                         return x(5)
                     }
                 });
-
-
                 d3.selectAll("text." + currentID).style("display", "block")
         },100)
-        }
+        } 
 
      });
 
