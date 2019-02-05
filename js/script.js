@@ -302,7 +302,12 @@ d3.csv(data, function(error, data){
         })
         .style("font-size", "10px")
         .text(function (d){
-            return d.value
+            if(d.value > 0){
+                return d.value
+            } else {
+                return zeroValue
+            }
+            
         });
     
 

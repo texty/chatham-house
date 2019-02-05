@@ -66,6 +66,11 @@
 
 </style>
 <body>
+<div id="logo-ch" style="background-color:#597B7C; width:100%;">
+    <a href="https://www.chathamhouse.org" target="_blank">
+        <img style="width:130px; padding:20px;" src="../img/CH_logo.png"/>
+    </a>
+</div>
 <div id="contentContainer">
     <div id=header>
         <div id="lang-button">
@@ -74,11 +79,11 @@
             </a>
         </div>
         <h1>Факторы влияния России в Украине, Беларуси, Молдове и реагирование со стороны государства / гражданского общества</h1>
-        <!--<div id="lang-button"><a href="../index.html"><img style="width:40px" src="../img/eng.png"></a></div>-->
+
 
     </div>
-
-    <div style="margin: 30px 15px;">
+    <label style="margin: 30px 0 10px 18px;"><b>выберите:</b></label><br>
+    <div style="margin: 10px 30px 20px 15px;">
         <label style="white-space: nowrap; color:#b32017; margin-right:30px;" for="influence"><input  type="checkbox" id="influence" name="influence" checked>показать уровень влияния</label>
         <label style="white-space: nowrap; color:#005984; margin-right:30px;" for="state"> <input type="checkbox" id="state" name="state">показать реагирование государства</label>
         <label style="white-space: nowrap; color:#00AEEF;" for="civil"><input type="checkbox" id="civil" name="civil">показать реагирование гражд. общества</label>
@@ -86,14 +91,17 @@
 
     <div id="chartContainer"></div>
 
-    <p id="footer"><b>Источник:</b> На основе интервью с экспертами в анализируемых странаx. Авторы исследования опросили 21 экспер в Ураине, 27 в Беларуси и 39 в Молдове. На схеме отражены уровни различных факторов уязвимости для <b>влияния России</b> в соответствии с оценками экспертов по шкале от 0 до 5, где <b>0</b> = 'отсутствует', <b>1</b> = 'минимальный', <b>2</b> = 'умеренный', <b>3</b> = 'существенный', <b>4</b> = 'критический' и <b>5</b> = 'доминирующий'. <b>Реагирование со стороны государства и гражданского общества</b> оценено по шкале от 0 до 5, где <b>0</b> = 'реагирование отсутствует', <b>1</b> = 'минимальное реагирование', <b>2</b> = 'мягкое реагирование', <b>3</b> = 'умеренные усилия', <b>4</b> = 'существенные усилия' и <b>5</b> = 'действенные усилия на высоком уровне'.</p>
+    <p id="footer"><b>Источник:</b> На основе интервью с экспертами в анализируемых странаx. Авторы исследования опросили 21 эксперта в Ураине, 27 в Беларуси и 39 в Молдове. На схеме отражены уровни различных факторов уязвимости для <b>влияния России</b> в соответствии с оценками экспертов по шкале от 0 до 5, где <b>0</b> = 'отсутствует', <b>1</b> = 'минимальный', <b>2</b> = 'умеренный', <b>3</b> = 'существенный', <b>4</b> = 'критический' и <b>5</b> = 'доминирующий'. <b>Реагирование со стороны государства и гражданского общества</b> оценено по шкале от 0 до 5, где <b>0</b> = 'реагирование отсутствует', <b>1</b> = 'минимальное реагирование', <b>2</b> = 'мягкое реагирование', <b>3</b> = 'умеренные усилия', <b>4</b> = 'существенные усилия' и <b>5</b> = 'действенные усилия на высоком уровне'.</p>
 </div>
-
+<div id="ned-logo" style="width:100%; background-color:rgba(89, 123, 124, 0.25);">
+    <img src="../img/Logo.png" style="width:200px; padding:20px; "/>
+</div>
 <script>
     var data = "data/data_ru.csv";
     var titleHeight = "40px";
     var currentLanguage = "ru";
     var prefix = "из";
+    var zeroValue = "отсутствует"
 </script>
 <script src="../lib/jquery-2.1.4.min.js"></script>
 <script src="https://d3js.org/d3.v4.min.js"></script>
