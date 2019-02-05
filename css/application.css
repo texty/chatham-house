@@ -33,7 +33,7 @@
   -webkit-margin-after: 0; }
 
 body {
-  width: 650px;
+  max-width: 650px;
   margin: 0;
   padding: 0;
   font-size: 16px;
@@ -185,7 +185,7 @@ g.tick text {
   label {
     font-size: 13px; } }
 .tippy-tooltip.tomato-theme {
-  max-width: 200px;
+  max-width: 250px;
   text-align: left; }
 
 /*# sourceMappingURL=application.css.map */

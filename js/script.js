@@ -139,62 +139,62 @@ d3.csv(data, function(error, data){
             if(window.innerWidth < 800 && currentLanguage === "eng"){
                 if(d.measure === "Russian influence"){
                     if(d.value === 1){
-                        return "minimal level of influence: "+ d.value + " from 5 (based on interviews with experts in the target countries)"
+                        return "minimal level of influence: <br>"+ d.value + " from 5 <br>based on interviews with experts"
                     } else if(d.value === 2){
-                        return "moderate level of influence: "+ d.value + " from 5 (based on interviews with experts in the target countries)"
+                        return "moderate level of influence: <br>"+ d.value + " from 5 <br>based on interviews with experts"
                     } else if(d.value === 3){
-                        return "substantial level of influence: "+ d.value + " from 5 (based on interviews with experts in the target countries)"
+                        return "substantial level of influence: <br>"+ d.value + " from 5 <br>based on interviews with experts"
                     } else if(d.value === 4){
-                        return "critical level of influence: "+ d.value + " from 5 (based on interviews with experts in the target countries)"
+                        return "critical level of influence: <br>"+ d.value + " from 5 <br>based on interviews with experts"
                     } else if(d.value === 5){
-                        return "most prevalent level of influence: "+ d.value + " from 5 (based on interviews with experts in the target countries)"
+                        return "most prevalent level of influence: <br>"+ d.value + " from 5 <br>based on interviews with experts"
                     }
 
                 } else {
                     if(d.value === 1){
-                        return "minimal response: "+ d.value + " from 5 (based on interviews with experts in the target countries)"
+                        return "minimal response: <br>"+ d.value + " from 5 <br>based on interviews with experts"
                     } else if(d.value === 2){
-                        return "mild response: "+ d.value + " from 5 (based on interviews with experts in the target countries)"
+                        return "mild response: <br>"+ d.value + " from 5 <br>based on interviews with experts"
                     } else if(d.value === 3){
-                        return "moderate effort: "+ d.value + " from 5 (based on interviews with experts in the target countries)"
+                        return "moderate effort: <br>"+ d.value + " from 5 <br>based on interviews with experts"
                     } else if(d.value === 4){
-                        return "substantial effort: "+ d.value + " from 5 (based on interviews with experts in the target countries)"
+                        return "substantial effort: <br>"+ d.value + " from 5 <br>based on interviews with experts"
                     } else if(d.value === 5){
-                        return "high-level effective effort: "+ d.value + " from 5 (based on interviews with experts in the target countries)"
+                        return "high-level effective effort: <br>"+ d.value + " from 5 <br>based on interviews with experts"
                     }
                     else if(d.value === 0){
-                        return "no response: "+ d.value + " from 5 (based on interviews with experts in the target countries)"
+                        return "no response: <br>"+ d.value + " from 5 <br>based on interviews with experts"
                     }
                 }
 
             }  else if(window.innerWidth < 800 && currentLanguage === "ru"){
                 if(d.measure === "Russian influence"){
                     if(d.value === 1){
-                        return "минимальный уровень влияния: "+ d.value + " из 5 (на основе интервью с экспертами в анализируемых странах)"
+                        return "минимальный уровень влияния: <br>"+ d.value + " из 5 <br>на основе интервью с экспертами"
                     } else if(d.value === 2){
-                        return "умеренный уровень влияния: "+ d.value + " из 5 (на основе интервью с экспертами в анализируемых странах)"
+                        return "умеренный уровень влияния: <br>"+ d.value + " из 5 <br>на основе интервью с экспертами"
                     } else if(d.value === 3){
-                        return "существенный уровень влияния: "+ d.value + " из 5 (на основе интервью с экспертами в анализируемых странах)"
+                        return "существенный уровень влияния: <br>"+ d.value + " из 5 <br>на основе интервью с экспертами"
                     } else if(d.value === 4){
-                        return "критический уровень влияния: "+ d.value + " из 5 (на основе интервью с экспертами в анализируемых странах)"
+                        return "критический уровень влияния: <br>"+ d.value + " из 5 <br>на основе интервью с экспертами"
                     } else if(d.value === 5){
-                        return "доминирующий уровень влияния: "+ d.value + " из 5 (на основе интервью с экспертами в анализируемых странах)"
+                        return "доминирующий уровень влияния: <br>"+ d.value + " из 5 <br>на основе интервью с экспертами"
                     }
 
                 } else {
                     if(d.value === 1){
-                        return "минимальное реагирование: "+ d.value + " из 5 (на основе интервью с экспертами в анализируемых странах)"
+                        return "минимальное реагирование: <br>"+ d.value + " из 5 <br>на основе интервью с экспертами"
                     } else if(d.value === 2){
-                        return "мягкое реагирование: "+ d.value + " из 5 (на основе интервью с экспертами в анализируемых странах)"
+                        return "мягкое реагирование: <br>"+ d.value + "  из 5 <br>на основе интервью с экспертами"
                     } else if(d.value === 3){
-                        return "минимальное реагирование: "+ d.value + " из 5 (на основе интервью с экспертами в анализируемых странах)"
+                        return "минимальное реагирование: <br>"+ d.value + " из 5 <br>на основе интервью с экспертами"
                     } else if(d.value === 4){
-                        return "умеренные усилия: "+ d.value + " из 5 (на основе интервью с экспертами в анализируемых странах)"
+                        return "умеренные усилия: <br>"+ d.value + " из 5 <br>на основе интервью с экспертами"
                     } else if(d.value === 5){
-                        return "существенные усилия: "+ d.value + " из 5 (на основе интервью с экспертами в анализируемых странах)"
+                        return "существенные усилия: <br>"+ d.value + " из 5 <br>на основе интервью с экспертами"
                     }
                     else if(d.value === 0){
-                        return "действенные усилия на высоком уровне: "+ d.value + " из 5 (на основе интервью с экспертами в анализируемых странах)"
+                        return "действенные усилия на высоком уровне: <br>"+ d.value + " из 5 <br>на основе интервью с экспертами"
                     }
                 }
             }
