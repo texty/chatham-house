@@ -33,6 +33,7 @@
   -webkit-margin-after: 0; }
 
 body {
+  width: 650px;
   margin: 0;
   padding: 0;
   font-size: 16px;
@@ -48,10 +49,10 @@ body {
       max-width: 100%; } }
   #contentContainer #header {
     max-width: 1200px;
-    width: 96vw;
+    width: 100%;
     margin: 40px auto 4% 0;
     display: grid;
-    grid-template-columns: auto 120px;
+    grid-template-columns: auto 55px;
     grid-auto-rows: auto; }
     @media (max-width: 825px) {
       #contentContainer #header {
@@ -118,7 +119,7 @@ body {
   #contentContainer p#footer {
     text-align: justify;
     line-height: 1.6;
-    width: 100vw;
+    width: 100%;
     max-width: 1150px;
     margin: 5px auto 5% 0; }
     @media (max-width: 825px) {
@@ -127,9 +128,9 @@ body {
 
 #chartContainer {
   margin: 0 0 0 0;
-  width: 100vw;
+  width: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   flex-wrap: wrap;
   max-width: 1200px;
   height: auto;
@@ -150,8 +151,7 @@ span {
   opacity: 1; }
 
 .svgContainer {
-  margin-right: 5px;
-  width: 210px;
+  width: 250px;
   height: 280px; }
 
 .childDIV {

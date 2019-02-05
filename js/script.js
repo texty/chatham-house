@@ -307,7 +307,7 @@ d3.csv(data, function(error, data){
             } else {
                 return zeroValue
             }
-            
+
         });
     
 
