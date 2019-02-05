@@ -127,7 +127,7 @@ body {
 
 #chartContainer {
   margin: 0 0 0 0;
-  width: 90vw;
+  width: 100vw;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -150,8 +150,8 @@ span {
   opacity: 1; }
 
 .svgContainer {
-  margin-right: 20px;
-  width: 250px;
+  margin-right: 5px;
+  width: 210px;
   height: 280px; }
 
 .childDIV {
