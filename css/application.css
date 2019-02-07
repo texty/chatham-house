@@ -54,7 +54,7 @@ body {
     display: grid;
     grid-template-columns: auto 55px;
     grid-auto-rows: auto; }
-    @media (max-width: 825px) {
+    @media (max-width: 600px) {
       #contentContainer #header {
         display: block;
         width: 90%; } }
@@ -75,7 +75,7 @@ body {
     cursor: pointer;
     text-align: left;
     display: flex; }
-    @media (max-width: 825px) {
+    @media (max-width: 600px) {
       #contentContainer #lang-button {
         margin-bottom: 20px;
         grid-column: 1/2;
