@@ -121,7 +121,7 @@ body {
     line-height: 1.6;
     width: 100%;
     max-width: 1150px;
-    margin: 5px auto 5% 0; }
+    margin: -5px auto 5% 0; }
     @media (max-width: 825px) {
       #contentContainer p#footer {
         width: 100%; } }
