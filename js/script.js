@@ -469,6 +469,4 @@ $(document).ready(function() {
     $("input").click(onClickBox);
 });
 
-$("#influence-hover-over").on("click", function() {
-    alert("hi")
-});
+// 
