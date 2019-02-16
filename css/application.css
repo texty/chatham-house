@@ -190,7 +190,9 @@ g.tick text {
 
 .tippy-tooltip.info-theme {
   max-width: 350px;
-  text-align: left; }
+  text-align: left;
+  line-height: 1.6;
+  font-size: 13px; }
 
 .hover-over {
   cursor: pointer; }
