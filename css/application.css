@@ -188,4 +188,11 @@ g.tick text {
   max-width: 250px;
   text-align: left; }
 
+.tippy-tooltip.info-theme {
+  max-width: 350px;
+  text-align: left; }
+
+.hover-over {
+  cursor: pointer; }
+
 /*# sourceMappingURL=application.css.map */
