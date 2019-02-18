@@ -139,31 +139,31 @@ d3.csv(data, function(error, data){
             if(window.innerWidth < 800 && currentLanguage === "eng"){
                 if(d.measure === "Russian influence"){
                     if(d.value === 1){
-                        return "Minimal level of influence: <br>"+ d.value + " from 5 <br>based on interviews with experts"
+                        return "Minimal level of influence: <br>"+ d.value + " out of 5 <br>based on interviews with experts"
                     } else if(d.value === 2){
-                        return "Moderate level of influence: <br>"+ d.value + " from 5 <br>based on interviews with experts"
+                        return "Moderate level of influence: <br>"+ d.value + " out of 5 <br>based on interviews with experts"
                     } else if(d.value === 3){
-                        return "Substantial level of influence: <br>"+ d.value + " from 5 <br>based on interviews with experts"
+                        return "Substantial level of influence: <br>"+ d.value + " out of 5 <br>based on interviews with experts"
                     } else if(d.value === 4){
-                        return "Critical level of influence: <br>"+ d.value + " from 5 <br>based on interviews with experts"
+                        return "Critical level of influence: <br>"+ d.value + " out of 5 <br>based on interviews with experts"
                     } else if(d.value === 5){
-                        return "Most prevalent level of influence: <br>"+ d.value + " from 5 <br>based on interviews with experts"
+                        return "Most prevalent level of influence: <br>"+ d.value + " out of 5 <br>based on interviews with experts"
                     }
 
                 } else {
                     if(d.value === 1){
-                        return "Minimal response: <br>"+ d.value + " from 5 <br>based on interviews with experts"
+                        return "Minimal response: <br>"+ d.value + " out of 5 <br>based on interviews with experts"
                     } else if(d.value === 2){
-                        return "Mild response: <br>"+ d.value + " from 5 <br>based on interviews with experts"
+                        return "Mild response: <br>"+ d.value + " out of 5 <br>based on interviews with experts"
                     } else if(d.value === 3){
-                        return "Moderate effort: <br>"+ d.value + " from 5 <br>based on interviews with experts"
+                        return "Moderate effort: <br>"+ d.value + " out of 5 <br>based on interviews with experts"
                     } else if(d.value === 4){
-                        return "Substantial effort: <br>"+ d.value + " from 5 <br>based on interviews with experts"
+                        return "Substantial effort: <br>"+ d.value + " out of 5 <br>based on interviews with experts"
                     } else if(d.value === 5){
-                        return "High-level effective effort: <br>"+ d.value + " from 5 <br>based on interviews with experts"
+                        return "High-level effective effort: <br>"+ d.value + " out of 5 <br>based on interviews with experts"
                     }
                     else if(d.value === 0){
-                        return "no response: <br>"+ d.value + " from 5 <br>based on interviews with experts"
+                        return "no response: <br>"+ d.value + " out of 5 <br>based on interviews with experts"
                     }
                 }
 
