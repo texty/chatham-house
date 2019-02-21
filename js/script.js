@@ -2,11 +2,17 @@
  * Created by yevheniia on 01.12.18.
  */
 
+var chartRect = $("#chartContainer")[0].getBoundingClientRect()
 
-    var w = window.innerWidth * 0.9,
-        h = window.innerHeight * 0.9,
-        m = {top: 10, left: 20, bottom: 20, right: 20 },
-        aspect = w / h;
+$("#hint").css("width", chartRect.width)
+
+
+
+
+var w = window.innerWidth * 0.9,
+    h = window.innerHeight * 0.9,
+    m = {top: 10, left: 20, bottom: 20, right: 20 },
+    aspect = w / h;
 
 
 var chartWidth  = 250,
