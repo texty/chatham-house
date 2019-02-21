@@ -51,8 +51,6 @@ body {
     max-width: 1200px;
     width: 100%;
     margin: 40px auto 4% 0;
-    display: grid;
-    grid-template-columns: auto 55px;
     grid-auto-rows: auto; }
     @media (max-width: 600px) {
       #contentContainer #header {
@@ -65,9 +63,12 @@ body {
     font-weight: normal;
     font-size: 25px;
     line-height: 1.4;
-    width: 80%;
+    width: 100%;
     grid-column: 1/2;
     max-width: 1200px; }
+  #contentContainer #selectContainer {
+    display: grid;
+    grid-template-columns: auto 55px; }
   #contentContainer #lang-button {
     width: 50px;
     grid-column: 2/3;
@@ -75,12 +76,6 @@ body {
     cursor: pointer;
     text-align: left;
     display: flex; }
-    @media (max-width: 600px) {
-      #contentContainer #lang-button {
-        margin-bottom: 20px;
-        grid-column: 1/2;
-        grid-row: 1/2;
-        text-align: left; } }
   #contentContainer #lang-button a {
     text-decoration: none;
     color: #597B7C;
@@ -104,6 +99,10 @@ body {
     display: -o-flex;
     display: flex;
     flex: 1; }
+  #contentContainer #hint {
+    margin: 10px 0;
+    line-height: 1.6;
+    font-size: 14px; }
   #contentContainer p {
     font-size: 14px;
     font-weight: 100; }
