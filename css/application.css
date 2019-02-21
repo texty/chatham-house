@@ -67,6 +67,7 @@ body {
     grid-column: 1/2;
     max-width: 1200px; }
   #contentContainer #selectContainer {
+    margin: 20px 0;
     display: grid;
     grid-template-columns: auto 55px; }
   #contentContainer #lang-button {
@@ -75,7 +76,8 @@ body {
     grid-row: 1/2;
     cursor: pointer;
     text-align: left;
-    display: flex; }
+    display: flex;
+    margin: auto 0; }
   #contentContainer #lang-button a {
     text-decoration: none;
     color: #597B7C;
