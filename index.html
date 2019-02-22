@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Drivers of Russian influence in Ukraine, Belarus and Moldova: state and civil society counter measures</title>
+    <title>Drivers of Russian influence in Ukraine, Belarus and Moldova: state and civil society counter
+        measures</title>
 
     <!-- OpenGraph Meta Tags -->
     <meta property="og:site_name"
@@ -48,11 +49,11 @@
 
 
     h2 {
-        height:20px;
-        margin:auto 2px;
-        font-size:15px;
+        height: 20px;
+        margin: auto 2px;
+        font-size: 15px;
         font-weight: 100;
-        color:#597B7C;
+        color: #597B7C;
         text-transform: uppercase;
     }
 
@@ -62,18 +63,31 @@
 
 <div id="contentContainer">
 
-<div id = header>
+    <div id=header>
 
-    <h1>Drivers of Russian influence in Ukraine, Belarus and Moldova: state and civil society counter measures</h1>
-</div>
-
-    <div id=selectContainer >
-
-    <div style="">
-        <label style="white-space: nowrap; color:#b32017; margin-right:30px;" for="influence"><input  type="checkbox" id="influence" name="influence" checked>Select to show vulnerability<img id="influence-hover-over" class="hover-over" src="img/icon-red.svg" style="margin:5px 0 0 5px; width:15px" data-tippy-content='Russian influence as perceived by the experts, on a scale of 0 to 5, where 0 = "non-existent", 1 = "minimal", 2 = "moderate", 3 = "substantial", 4 = "critical" and 5 = "most prevalent"'/></label>
-        <label style="white-space: nowrap; color:#005984; margin-right:30px;" for="state"> <input type="checkbox" id="state" name="state">Select to show state-level counter measures<img id="state-hover-over" class="hover-over" src="img/icon-blue.svg" style="margin:5px 0 0 5px; width:15px" data-tippy-content='State responses are rated on a scale of 0 to 5, where 0 = "no response", 1 = "minimal response", 2 = "mild response", 3 = "moderate effort", 4 = "substantial effort" and 5 = "high-level effective effort"'/></label>
-        <label style="white-space: nowrap; color:#00AEEF;" for="civil"><input type="checkbox" id="civil" name="civil">Select to show civil society counter measures<img id="civil-hover-over" class="hover-over" src="img/icon-lightblue.svg" style="margin:5px 0 0 5px; width:15px" data-tippy-content='Civil society responses are rated on a scale of 0 to 5, where 0 = "no response", 1 = "minimal response", 2 = "mild response", 3 = "moderate effort", 4 = "substantial effort" and 5 = "high-level effective effort"'/></label>
+        <h1>Drivers of Russian influence in Ukraine, Belarus and Moldova: state and civil society counter measures</h1>
     </div>
+    <div id=selectContainer>
+        <div style="">
+            <label style="white-space: nowrap; color:#b32017; margin-right:30px;" for="influence"><input type="checkbox"
+                                                                                                         id="influence"
+                                                                                                         name="influence"
+                                                                                                         checked>Select
+                to show vulnerability<img id="influence-hover-over" class="hover-over" src="img/icon-red.svg"
+                                          style="margin:5px 0 0 5px; width:15px"
+                                          data-tippy-content='Russian influence as perceived by the experts, on a scale of 0 to 5, where 0 = "non-existent", 1 = "minimal", 2 = "moderate", 3 = "substantial", 4 = "critical" and 5 = "most prevalent"'/></label>
+            <label style="white-space: nowrap; color:#005984; margin-right:30px;" for="state"> <input type="checkbox"
+                                                                                                      id="state"
+                                                                                                      name="state">Select
+                to show state-level counter measures<img id="state-hover-over" class="hover-over"
+                                                         src="img/icon-blue.svg" style="margin:5px 0 0 5px; width:15px"
+                                                         data-tippy-content='State responses are rated on a scale of 0 to 5, where 0 = "no response", 1 = "minimal response", 2 = "mild response", 3 = "moderate effort", 4 = "substantial effort" and 5 = "high-level effective effort"'/></label>
+            <label style="white-space: nowrap; color:#00AEEF;" for="civil"><input type="checkbox" id="civil"
+                                                                                  name="civil">Select to show civil
+                society counter measures<img id="civil-hover-over" class="hover-over" src="img/icon-lightblue.svg"
+                                             style="margin:5px 0 0 5px; width:15px"
+                                             data-tippy-content='Civil society responses are rated on a scale of 0 to 5, where 0 = "no response", 1 = "minimal response", 2 = "mild response", 3 = "moderate effort", 4 = "substantial effort" and 5 = "high-level effective effort"'/></label>
+        </div>
 
         <div id="lang-button">
             <a class="language-link" style="" href="ru/index.html">
@@ -82,18 +96,18 @@
         </div>
     </div>
 
-    <p id="hint">"Responses" here means counter measures taken by difference actors, not "response to our questions"</p>
+
+    <div id="chartContainer"></div>
 
 
-<div id="chartContainer"></div>
-
-
-    <p id="footer"><b>Source:</b>Based on interviews with experts in the target countries. The Chatham House authors interviewed 21 experts in Ukraine, 27 in Belarus and 39 in Moldova. The chart maps levels of various vulnerabilities to Russian influence as perceived by the experts.</p>
+    <p id="footer"><b>Source: </b>Based on interviews with experts in the target countries. The Chatham House authors
+        interviewed 21 experts in Ukraine, 27 in Belarus and 39 in Moldova. The chart maps levels of various
+        vulnerabilities to Russian influence as perceived by the experts.</p>
 
 </div>
 
 <!--<div id="ned-logo" style="width:100%;">-->
-    <!--<img src="img/Logo.png" style="width:200px"/>-->
+<!--<img src="img/Logo.png" style="width:200px"/>-->
 <!--</div>-->
 <script>
 
@@ -105,7 +119,7 @@
 </script>
 
 <script src="lib/jquery-2.1.4.min.js"></script>
-<script src ="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://unpkg.com/tippy.js@3/dist/tippy.all.min.js"></script>
 
 <!--<script src="lib/d3.min.js"></script>-->
